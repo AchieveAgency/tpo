@@ -1,0 +1,14 @@
+uuid: 87f229cc-7def-4847-9850-b74fc2841941
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - it-drupal@achieveagency.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
