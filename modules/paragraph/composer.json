@@ -1,5 +1,5 @@
 {
-  "name": "drupal/tpo_paragraph",
+  "name": "tpo/tpo_paragraph",
   "type": "drupal-module",
   "description": "Paragraphs developed specifically for TPO based on bootstrap.",
   "keywords": ["Drupal"],

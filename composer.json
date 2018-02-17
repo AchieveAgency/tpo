@@ -1,5 +1,5 @@
 {
-  "name": "achieve/tpo",
+  "name": "tpo/tpo",
   "type": "drupal-module",
   "description": "Defines common functionality for all TPO modules.",
   "keywords": ["Drupal"],

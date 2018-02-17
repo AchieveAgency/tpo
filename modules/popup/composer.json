@@ -1,5 +1,5 @@
 {
-  "name": "drupal/tpo_popup",
+  "name": "tpo/tpo_popup",
   "type": "drupal-module",
   "description": "Popup manager for TPO.",
   "keywords": ["Drupal"],

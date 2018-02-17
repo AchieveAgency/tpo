@@ -1,5 +1,5 @@
 {
-  "name": "drupal/tpo_page",
+  "name": "tpo/tpo_page",
   "type": "drupal-module",
   "description": "Pages submodule for TPO.",
   "keywords": ["Drupal"],

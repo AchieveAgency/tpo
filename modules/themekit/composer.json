@@ -1,5 +1,5 @@
 {
-  "name": "drupal/tpo_themekit",
+  "name": "tpo/tpo_themekit",
   "type": "drupal-module",
   "description": "Theme submodule kit for TPO.",
   "keywords": ["Drupal"],

@@ -1,5 +1,5 @@
 {
-  "name": "drupal/tpo_social_share",
+  "name": "tpo/tpo_social_share",
   "type": "drupal-module",
   "description": "Social sharing AddThis integration for TPO.",
   "keywords": ["Drupal"],
