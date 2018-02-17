@@ -1,0 +1,34 @@
+uuid: 610c335c-dc74-45ae-ad1c-90ceb0adad45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_form_cont
+    - paragraphs.paragraphs_type.tpo_paragraph_webform
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - webform
+_core:
+  default_config_hash: RDcbJRrVUx7QvQa-WyLPf9kBB4RkZg-Y99h3kon2rq8
+id: paragraph.tpo_paragraph_webform.field_tpo_paragraph_form_cont
+field_name: field_tpo_paragraph_form_cont
+entity_type: paragraph
+bundle: tpo_paragraph_webform
+label: 'Webform Content'
+description: 'Choose a form to embed on the page.<br><br>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

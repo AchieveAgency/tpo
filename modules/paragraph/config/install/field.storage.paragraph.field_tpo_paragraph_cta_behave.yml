@@ -1,0 +1,45 @@
+uuid: 594277a4-811f-4aea-b229-1f08c4e1194e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: kyd46Nq1QdPa_lPHo_PM88gFc2V5Ryr-teq_Cj3b82w
+id: paragraph.field_tpo_paragraph_cta_behave
+field_name: field_tpo_paragraph_cta_behave
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: block-link
+      label: 'Full Block Link'
+    -
+      value: btn-style
+      label: 'Button Link'
+    -
+      value: btn-style-corner-radius
+      label: 'Button Link, rounded corners'
+    -
+      value: text-link
+      label: 'Single Text Link'
+    -
+      value: title-text-link
+      label: 'Title and text link'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,7 @@
+name: TPO Campaign
+type: module
+description: Campaign feature for TPO.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo

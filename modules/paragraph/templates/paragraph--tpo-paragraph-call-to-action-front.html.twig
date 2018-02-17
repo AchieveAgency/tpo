@@ -1,0 +1,163 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################CTA field Variable########################################}
+{% if content.field_tpo_paragraph_title['#object'] %}
+	{% set title = content.field_tpo_paragraph_title|render|striptags|trim %}
+{% else %}
+	{% set title = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_subtitle['#object'] %}
+	{% set subtitle = content.field_tpo_paragraph_subtitle|render|striptags|trim %}
+{% else %}
+	{% set subtitle = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_body['#object'] %}
+	{% set body = content.field_tpo_paragraph_body %}
+{% else %}
+	{% set body = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_image['#object'] %}
+	{% set image = content.field_tpo_paragraph_image %}
+{% else %}
+	{% set image = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_image_link['#object'] %}
+	{% set link_url = content.field_tpo_paragraph_image_link.0['#url'] %}
+	{% set link_text = content.field_tpo_paragraph_image_link.0['#title'] %}
+{% else %}
+	{% set link_url = false %}
+{% endif %}
+
+{% if content.field_target_link['#object'] %}
+	{% set target_link = content.field_tpo_paragraph_image_targ.0['#markup']|render|striptags|trim %}
+{% else %}
+	{% set target_link = "_self" %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_cta_behave['#object'] %}
+	{% set link_behavior = content.field_tpo_paragraph_cta_behave.0['#markup'] %}
+{% else %}
+	{% set link_behavior = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_cta_link_fx['#object'] %}
+	{% set hover_effect = content.field_tpo_paragraph_cta_link_fx.0['#markup']|render|striptags|trim %}
+{% else %}
+	{% set hover_effect = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_btn_icn_pos['#object'] %}
+	{% set icon_position = content.field_tpo_paragraph_btn_icn_pos.0['#markup']|render|striptags|trim|lower %}
+{% else %}
+	{% set icon_position = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_btn_icon['#object'] %}
+	{% set icon = content.field_tpo_paragraph_btn_icon.0['#markup']|render|striptags|trim %}
+{% else %}
+	{% set icon = false %}
+{% endif %}
+
+{% if content.field_tpo_paragraph_cta_style['#object'] %}
+{% set style = content.field_tpo_paragraph_cta_style.0['#markup']|render|striptags|trim %}
+{% else %}
+{% set style = false %}
+{% endif %}
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set classes = [
+	'tpo-paragraph-cta',
+	'paragraph--type--call-to-action',
+	"tpo-paragraph-content",
+	style ? style|clean_class,
+	tpo_paragraph.class ? tpo_paragraph.class,
+  ]
+%}
+
+{%
+  set cta_link_classes = [
+    'cta-link',
+	hover_effect ? hover_effect|clean_class,
+	link_behavior ? link_behavior|clean_class,
+  ]
+%}
+
+{%
+  set cta_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{% set link_attributes = create_attribute() %}
+
+{############################# Begins paragraph markup ########################################}
+
+{% block paragraph %}
+
+{% if link_behavior == 'block-link' %}
+  <a href="{{ link_url }}" target="{{ target_link }}" {{ attributes.addClass(classes, cta_link_classes) }} {{ global.add_id( cta_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image_two,tpo_paragraph.background_image_style) }}">
+{% else %}
+  <div {{ attributes.addClass(classes, className) }} {{ global.add_id( cta_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image_two,tpo_paragraph.background_image_style) }}">
+{% endif %}
+	<div class="inner clearfix cta-image">
+    {% block content %}
+	  {% if image %}
+		{{ image }}
+	  {% endif %}
+	<div class="cta-content">
+		{% if link_behavior == 'title-text-link' %}
+			{% if title %}
+		  		<h2 class="cta-title"><a href="{{ link_url }}" target="{{ target_link }}">{{ title }}</a></h2>
+			{% endif %}
+		{% else %}
+			{% if title %}
+		  		<h2 class="cta-title">{{ title }}</h2>
+			{% endif %}
+		{% endif %}
+
+		{% if subtitle %}
+	  		<h3 class="cta-subtitle">{{ subtitle }}</h3>
+		{% endif %}
+
+		  {% if body %}
+			{{ body }}
+		  {% endif %}
+	  </div>
+
+	  {% if link_behavior == 'btn-style' %}
+		<div class="cta-btn">
+			<a href="{{ link_url }}" target="{{ target_link }}" {{ link_attributes.addClass(cta_link_classes, 'btn') }}>{% if icon_position == 'left' %}<i class="mright-5 fa {{ icon }}" aria-hidden="true"></i>{% endif %}{{ link_text }}{% if icon_position == 'right' %}<i class="fa mleft-5 {{ icon }}" aria-hidden="true"></i>{% endif %}</a>
+		</div>
+	  {% elseif link_behavior == 'btn-style-corner-radius' %}
+	  	<div class="cta-btn">
+			<a href="{{ link_url }}" target="{{ target_link }}" {{ link_attributes.addClass(cta_link_classes, 'btn') }}>{% if icon_position == 'left' %}<i class="fa mright-5 {{ icon }}" aria-hidden="true"></i>{% endif %}{{ link_text }}{% if icon_position == 'right' %}<i class="fa mleft-5 {{ icon }}" aria-hidden="true"></i>{% endif %}</a>
+		</div>
+	  {% elseif link_behavior == 'block-link' %}
+		<div class="cta-btn">
+			<span class="text-link">{{ link_text }}</span>
+		</div>
+	  {% elseif link_behavior == 'title-text-link' %}
+		<div class="cta-btn">
+			<a href="{{ link_url }}" target="{{ target_link }}"{{ link_attributes.addClass(cta_link_classes) }}>{% if icon_position == 'left' %}<i class="fa mright-5 {{ icon }}" aria-hidden="true"></i>{% endif %}{{ link_text }}{% if icon_position == 'right' %}<i class="fa mleft-5 {{ icon }}" aria-hidden="true"></i>{% endif %}</a>
+		</div>
+	  {% endif %}
+
+    {% endblock %}
+	</div>
+
+{% if link_behavior == 'block-link' %}
+  </a>
+{% else %}
+  </div>
+{% endif %}
+
+{% endblock paragraph %}
+
+{############################# Ends paragraph markup ########################################}

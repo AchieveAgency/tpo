@@ -1,0 +1,13 @@
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_tab_body['#object'] %}
+    {% set tab_content = content.field_tpo_paragraph_tab_body %}
+{% else %}
+    {% set tab_content = false %}
+{% endif %}
+
+
+{############################# Begins paragraph markup ########################################}
+{% if tab_content %}
+{{tab_content}}
+{% endif %}
+{############################# Ends paragraph markup ########################################}

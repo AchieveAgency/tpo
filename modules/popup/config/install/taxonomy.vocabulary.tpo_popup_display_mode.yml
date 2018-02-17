@@ -1,0 +1,11 @@
+uuid: 308c5732-2497-48c7-a80d-e77228822807
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eU8M4UsXqb-Ht6Ao13MJ8JIiTXxPal-uFLj1M2P27Dg
+name: 'TPO Popup Display Mode'
+vid: tpo_popup_display_mode
+description: ''
+hierarchy: 0
+weight: 0

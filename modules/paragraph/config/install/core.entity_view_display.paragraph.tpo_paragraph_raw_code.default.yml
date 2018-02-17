@@ -1,0 +1,22 @@
+uuid: d9e94dbd-0c89-4016-9bf0-d615f0542692
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_raw_code.field_tpo_paragraph_raw_code
+    - paragraphs.paragraphs_type.tpo_paragraph_raw_code
+_core:
+  default_config_hash: t2lnAXMoznu3zwSl6--wgKFPJ_RCsRMRSA0oPLdUfzM
+id: paragraph.tpo_paragraph_raw_code.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_raw_code
+mode: default
+content:
+  field_tpo_paragraph_raw_code:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

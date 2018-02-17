@@ -1,0 +1,41 @@
+uuid: 803966c0-d92c-4058-8e2b-dc123d5ef9f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_tab_name
+    - paragraphs.paragraphs_type.tpo_paragraph_tabs_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: J5-JkI0MYOzquL7Nb8_BYufNTBCrxRWahffLlJOHmhs
+id: paragraph.tpo_paragraph_tabs_section.field_tpo_paragraph_tab_name
+field_name: field_tpo_paragraph_tab_name
+entity_type: paragraph
+bundle: tpo_paragraph_tabs_section
+label: 'Tab Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

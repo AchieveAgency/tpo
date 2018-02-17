@@ -1,0 +1,7 @@
+name: TPO ThemeKit
+type: module
+description: Theme submodule kit for TPO.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo

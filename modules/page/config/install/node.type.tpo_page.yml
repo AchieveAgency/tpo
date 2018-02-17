@@ -1,0 +1,33 @@
+uuid: 47976203-39db-419d-9325-f073bbb2a595
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: Page
+type: tpo_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

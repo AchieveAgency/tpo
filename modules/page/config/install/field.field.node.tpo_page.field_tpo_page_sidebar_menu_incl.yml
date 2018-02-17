@@ -1,0 +1,23 @@
+uuid: fe436e65-520c-450c-95d0-38858a80dfdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_sidebar_menu_incl
+    - node.type.tpo_page
+id: node.tpo_page.field_tpo_page_sidebar_menu_incl
+field_name: field_tpo_page_sidebar_menu_incl
+entity_type: node
+bundle: tpo_page
+label: 'Include this page in sidebar menu'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

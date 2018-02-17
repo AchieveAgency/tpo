@@ -1,0 +1,22 @@
+uuid: 0ec88d63-7fc3-496a-8b0e-0c8a556c4e45
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - node
+id: node.field_tpo_page_sidebar_menu_incl
+field_name: field_tpo_page_sidebar_menu_incl
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

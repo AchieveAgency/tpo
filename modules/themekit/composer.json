@@ -1,0 +1,14 @@
+{
+  "name": "drupal/tpo_themekit",
+  "type": "drupal-module",
+  "description": "Theme submodule kit for TPO.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/tpo_themekit",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/tpo_themekit",
+    "source": "http://cgit.drupalcode.org/tpo_themekit"
+  },
+  "require": { }
+}

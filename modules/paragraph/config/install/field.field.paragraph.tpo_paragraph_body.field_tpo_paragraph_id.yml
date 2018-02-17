@@ -1,0 +1,41 @@
+uuid: 144f5bd8-2690-459f-a0c8-7c69ab0c37bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_id
+    - paragraphs.paragraphs_type.tpo_paragraph_body
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: DlhMCubjDVZ1I_Ujl6EZ1xC2p5rKr44-k2f5gWlJTqg
+id: paragraph.tpo_paragraph_body.field_tpo_paragraph_id
+field_name: field_tpo_paragraph_id
+entity_type: paragraph
+bundle: tpo_paragraph_body
+label: ID
+description: 'Specify a unique id for the content. Must contain at least one character and can''t contain any space characters.<br><br>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

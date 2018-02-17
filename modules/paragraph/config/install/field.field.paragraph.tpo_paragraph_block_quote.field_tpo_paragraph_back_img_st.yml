@@ -1,0 +1,28 @@
+uuid: eb5e8fd3-ae99-4e3f-8b99-409b6590d753
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_img_st
+    - paragraphs.paragraphs_type.tpo_paragraph_block_quote
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: h1Zwa2Pzpfpxa1DokDDtwXxFtM8tE61FcM8hvLe5KGw
+id: paragraph.tpo_paragraph_block_quote.field_tpo_paragraph_back_img_st
+field_name: field_tpo_paragraph_back_img_st
+entity_type: paragraph
+bundle: tpo_paragraph_block_quote
+label: 'Background Image Style'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: cover
+default_value_callback: ''
+settings: {  }
+field_type: list_string

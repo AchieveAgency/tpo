@@ -1,0 +1,347 @@
+uuid: 54792e48-3092-4b26-93d1-c2039a0529cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_back_color
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_back_img_st
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_back_p_style
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_class
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_column_1
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_column_2
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_column_3
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_column_4
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_id
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_image
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_margin_
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_margin_left
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_margin_righ
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_margin_top
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_b1
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_b2
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_b3
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_b4
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_bot
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_l1
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_l2
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_l3
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_l4
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_lef
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_r1
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_r2
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_r3
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_r4
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_rig
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_t1
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_t2
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_t3
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_t4
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_padding_top
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_raw_code
+    - field.field.paragraph.tpo_paragraph_4_column.field_tpo_paragraph_title
+    - paragraphs.paragraphs_type.tpo_paragraph_4_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+    - image
+    - jquery_colorpicker
+    - options
+_core:
+  default_config_hash: AMA8Cc4beRtSgy3TBCmKgqG4YKRytu0Xwn6EugR5ros
+id: paragraph.tpo_paragraph_4_column.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_4_column
+mode: default
+content:
+  field_tpo_paragraph_back_color:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: jquery_colorpicker_color_display
+    region: content
+  field_tpo_paragraph_back_img_st:
+    weight: 35
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_back_p_style:
+    weight: 34
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_class:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_column_1:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tpo_paragraph_column_2:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tpo_paragraph_column_3:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tpo_paragraph_column_4:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_id:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_image:
+    weight: 33
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_margin_:
+    weight: 31
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_left:
+    weight: 30
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_righ:
+    weight: 28
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_top:
+    weight: 27
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_b1:
+    weight: 29
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_b2:
+    weight: 32
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_b3:
+    weight: 26
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_b4:
+    weight: 25
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_bot:
+    weight: 24
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_l1:
+    weight: 23
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_l2:
+    weight: 22
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_l3:
+    weight: 21
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_l4:
+    weight: 20
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_lef:
+    weight: 19
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_r1:
+    weight: 18
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_r2:
+    weight: 17
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_r3:
+    weight: 16
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_r4:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_rig:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_t1:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_t2:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_t3:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_t4:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_top:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_raw_code:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tpo_paragraph_title:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

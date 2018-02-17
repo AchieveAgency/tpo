@@ -1,0 +1,28 @@
+uuid: 9e6503ac-e630-45f8-b6c4-cc9108de2620
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_quote_size
+    - paragraphs.paragraphs_type.tpo_paragraph_block_quote
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: 2AofaLA-DgltHYuIcHmTrxaDaCBfgraFdGMKXjDr5fk
+id: paragraph.tpo_paragraph_block_quote.field_tpo_paragraph_quote_size
+field_name: field_tpo_paragraph_quote_size
+entity_type: paragraph
+bundle: tpo_paragraph_block_quote
+label: Size
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: well
+default_value_callback: ''
+settings: {  }
+field_type: list_string

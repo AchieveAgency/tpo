@@ -1,0 +1,42 @@
+uuid: 878d8cc6-f4b8-4181-86a3-5aa0a853ad01
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: pS8_V4p042Y38yZJNtQROEWBrhY0yMyCYwZQL3vEZBc
+id: paragraph.field_tpo_paragraph_back_style
+field_name: field_tpo_paragraph_back_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: color
+      label: 'Solid Color'
+    -
+      value: image
+      label: Image
+    -
+      value: video
+      label: Video
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{{ attach_library('tpo_page/tpo_page_library') }}
+
+{%
+  set classes = [
+    tpo_page.general.class,
+    'region',
+    'region-' ~ region|clean_class
+  ]
+%}
+{% if content %}
+<div{{ attributes.addClass(classes) }}
+
+  {% if tpo_page.header.style == "video" %}
+    style="background: transparent;">
+
+    <video width="100%" class="tpo-page-background-video" autoplay loop muted>
+      <source src="{{ tpo_page.header.video }}" type="video/mp4">
+    </video>
+
+  {% elseif tpo_page.header.style == "hide" %}
+    style="display: none;">
+
+  {% else %}
+
+    {% if tpo_page.header.style == "color" %}
+      style="background: #{{ tpo_page.header.color }};">
+
+    {% elseif tpo_page.header.style == "image" %}
+      {% set background_size = "auto" %}
+      {% set background_repeat = "" %}
+
+      {% if tpo_page.header.image.mode in ['cover', 'contain'] %}
+        {% set background_size = tpo_page.header.image.mode %}
+      {% elseif tpo_page.header.image.mode in ['repeat', 'no-repeat'] %}
+        {% set background_repeat = tpo_page.header.image.mode %}
+      {% endif %}
+
+      style="background: #{{ tpo_page.header.color }} url({{ tpo_page.header.image.url }}) {{ background_repeat }}; background-size: {{ background_size }};">
+
+    {% endif %}
+  {% endif %}
+
+  {{ content }}
+</div>
+{% endif %}

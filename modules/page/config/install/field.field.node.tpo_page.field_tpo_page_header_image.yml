@@ -1,0 +1,42 @@
+uuid: c3528ee1-8330-47fd-8599-f2928138aa4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_header_image
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - image
+id: node.tpo_page.field_tpo_page_header_image
+field_name: field_tpo_page_header_image
+entity_type: node
+bundle: tpo_page
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

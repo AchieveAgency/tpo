@@ -1,0 +1,13 @@
+tpo_popup:
+  version: 1.0.2
+  css:
+    layout:
+      assets/css/tpo_popup.css: {}
+  js:
+    assets/js/tpo_popup.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - bootstrap/modal
+    - core/jquery.once

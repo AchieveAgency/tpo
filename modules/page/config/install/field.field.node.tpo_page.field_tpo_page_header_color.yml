@@ -1,0 +1,27 @@
+uuid: 88cd4ff3-0054-4d3b-b339-16ae5674e455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_header_color
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - jquery_colorpicker
+id: node.tpo_page.field_tpo_page_header_color
+field_name: field_tpo_page_header_color
+entity_type: node
+bundle: tpo_page
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: FFFFFF
+default_value_callback: ''
+settings: {  }
+field_type: jquery_colorpicker

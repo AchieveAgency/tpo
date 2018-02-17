@@ -1,0 +1,40 @@
+uuid: 972678de-39ca-4701-bc28-53492363d034
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tpo_popup.field_tpo_popup_campaign
+    - field.field.node.tpo_popup.field_tpo_popup_delay
+    - field.field.node.tpo_popup.field_tpo_popup_description
+    - field.field.node.tpo_popup.field_tpo_popup_display_mode
+    - field.field.node.tpo_popup.field_tpo_popup_impression
+    - field.field.node.tpo_popup.field_tpo_popup_link
+    - field.field.node.tpo_popup.field_tpo_popup_scroll
+    - node.type.tpo_popup
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: TNO8n-PmOZvVdfdWemgX1VJyWjbflAwvhzVZuzQrkyo
+id: node.tpo_popup.default
+targetEntityType: node
+bundle: tpo_popup
+mode: default
+content:
+  field_tpo_popup_description:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_tpo_popup_campaign: true
+  field_tpo_popup_delay: true
+  field_tpo_popup_display_mode: true
+  field_tpo_popup_impression: true
+  field_tpo_popup_link: true
+  field_tpo_popup_scroll: true
+  links: true

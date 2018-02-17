@@ -1,0 +1,37 @@
+uuid: 7a31fc63-e84b-4d96-8b04-e6d6c047d645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_id
+    - paragraphs.paragraphs_type.tpo_paragraph_block_quote
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: he-KsBFQ1X8JBoktql39QNVWtmWgndkCiHXs2eAUO6U
+id: paragraph.tpo_paragraph_block_quote.field_tpo_paragraph_id
+field_name: field_tpo_paragraph_id
+entity_type: paragraph
+bundle: tpo_paragraph_block_quote
+label: ID
+description: 'Specify a unique id for the paragraph. Must contain at least one character and can''t contain any space characters. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

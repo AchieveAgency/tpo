@@ -1,0 +1,14 @@
+{
+  "name": "drupal/tpo_paragraph",
+  "type": "drupal-module",
+  "description": "Paragraphs developed specifically for TPO based on bootstrap.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/tpo_paragraph",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/tpo_paragraph",
+    "source": "http://cgit.drupalcode.org/tpo_paragraph"
+  },
+  "require": { }
+}

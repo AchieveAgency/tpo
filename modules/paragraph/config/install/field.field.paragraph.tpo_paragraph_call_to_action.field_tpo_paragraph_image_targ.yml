@@ -1,0 +1,28 @@
+uuid: c8f5bad8-224a-445e-8de0-8ae3f6f670bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_image_targ
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: xfXbn234fH6NO-1hzFAHvsgRVFJXweTwtjt7T3bGlf8
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_image_targ
+field_name: field_tpo_paragraph_image_targ
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: 'Open Link in'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: _blank
+default_value_callback: ''
+settings: {  }
+field_type: list_string

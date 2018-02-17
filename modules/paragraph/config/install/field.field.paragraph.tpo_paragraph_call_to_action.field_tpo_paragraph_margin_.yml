@@ -1,0 +1,37 @@
+uuid: c8c8ddf2-53e9-4344-85e5-8c156fd9526a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_margin_
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: BNrWmezGX5bofeoGYe0DgjsUx93hyGZyLxx8zfRVVSg
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_margin_
+field_name: field_tpo_paragraph_margin_
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: Bottom
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

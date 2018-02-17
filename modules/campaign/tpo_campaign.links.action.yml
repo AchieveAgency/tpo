@@ -1,0 +1,5 @@
+entity.tpo_campaign.add_form:
+  route_name: entity.tpo_campaign.add_form
+  title: 'Add Campaign'
+  appears_on:
+    - entity.tpo_campaign.collection

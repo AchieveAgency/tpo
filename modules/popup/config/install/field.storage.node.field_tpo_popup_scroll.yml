@@ -1,0 +1,22 @@
+uuid: 05eb5f19-5f94-40b6-bda7-abe5ce822559
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: _PX4I9M48KM6jtAobjl918hJ3bKHnMhdO49xNiU0prE
+id: node.field_tpo_popup_scroll
+field_name: field_tpo_popup_scroll
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

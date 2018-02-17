@@ -1,0 +1,24 @@
+.paragraphs-subform > .field-group-accordion-wrapper > h3{
+    margin-top: 0 !important;
+    border-top: 0;
+}
+.paragraphs-subform > .field-group-accordion-wrapper > h3:not(:last-of-type){
+    margin-bottom: 0 !important;
+}
+
+.paragraphs-subform > .field-group-tabs-wrapper > .horizontal-tabs{
+    margin-bottom: 0;
+}
+
+.paragraphs-subform .horizontal-tabs .horizontal-tabs-panes .field-group-tab .details-wrapper > .field-group-fieldset:not(:last-of-type){
+    margin-bottom: 25px;
+}
+
+.paragraphs-subform .field-group-format-wrapper .form-wrapper:not(:last-of-type),
+.field--name-field-tpo-paragraph-cta-style {
+    margin-bottom: 15px;
+}
+
+.paragraphs-subform .ui-accordion-header-icon{
+    float: left;
+}

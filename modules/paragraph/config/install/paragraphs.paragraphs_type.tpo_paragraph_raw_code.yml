@@ -1,0 +1,11 @@
+uuid: 254f2c43-d41e-47f6-8cc6-ca144eb2956f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _px_YM7eLc4ZJiEwOf5h_Mgn3BbJ_OM_Ptc0V31yCbE
+id: tpo_paragraph_raw_code
+label: 'Raw Code'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

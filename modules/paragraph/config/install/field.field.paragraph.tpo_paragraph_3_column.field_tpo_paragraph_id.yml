@@ -1,0 +1,41 @@
+uuid: 51104b7e-a1e5-4350-91ba-8ad15e2feb62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_id
+    - paragraphs.paragraphs_type.tpo_paragraph_3_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: _MfulfqpwEjROe-ogG4XSnkcK2vIZvPwDPI0FO7Qk7w
+id: paragraph.tpo_paragraph_3_column.field_tpo_paragraph_id
+field_name: field_tpo_paragraph_id
+entity_type: paragraph
+bundle: tpo_paragraph_3_column
+label: ID
+description: 'Specify a unique id for the row. Must contain at least one character and can''t contain any space characters.<br><br>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

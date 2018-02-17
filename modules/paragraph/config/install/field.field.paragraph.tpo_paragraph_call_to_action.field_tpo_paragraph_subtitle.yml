@@ -1,0 +1,41 @@
+uuid: c64007b6-9611-40e3-ba57-4e38b113109c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_subtitle
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: Z4Iet6gMVO6kFB4W2MuUvFdp4Bjh6xGFZwh5_Ip1Q70
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_subtitle
+field_name: field_tpo_paragraph_subtitle
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

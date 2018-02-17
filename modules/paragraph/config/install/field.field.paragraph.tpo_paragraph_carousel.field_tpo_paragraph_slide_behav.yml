@@ -1,0 +1,28 @@
+uuid: cc54a843-3107-4522-b920-e81dbd27698b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_slide_behav
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: Vz3wsZ0jG8CiQKa4JNoaG0M49r8lPjZP6FgoopA8zfg
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_slide_behav
+field_name: field_tpo_paragraph_slide_behav
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: Behavior
+description: "- None sets the carousel to never loop<br>\r\n- Auto-Play will keep the carousel continuously looping with the interval<br>\r\n- Pause on Hover will keep the carousel looping as long as the user is not hovering over the element<br><br>"
+required: false
+translatable: false
+default_value:
+  -
+    value: autoplay
+default_value_callback: ''
+settings: {  }
+field_type: list_string

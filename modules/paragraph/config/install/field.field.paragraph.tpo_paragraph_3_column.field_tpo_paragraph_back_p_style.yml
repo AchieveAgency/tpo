@@ -1,0 +1,28 @@
+uuid: ca5af213-1186-4df0-a818-7df28d5b2012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_p_style
+    - paragraphs.paragraphs_type.tpo_paragraph_3_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: CHPC9ZflcTgcmCzlKuW4gAa6nSQYuWLngoOtq6GjE1s
+id: paragraph.tpo_paragraph_3_column.field_tpo_paragraph_back_p_style
+field_name: field_tpo_paragraph_back_p_style
+entity_type: paragraph
+bundle: tpo_paragraph_3_column
+label: Style
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,26 @@
+uuid: fbe94c82-6f15-42da-981f-fac298260b30
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - paragraphs
+_core:
+  default_config_hash: oMMYSfHfvNRzLjuXF5X_8vK5BdVWaKd49hZ8btrLbMI
+id: paragraph.field_tpo_paragraph_margin_righ
+field_name: field_tpo_paragraph_margin_righ
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

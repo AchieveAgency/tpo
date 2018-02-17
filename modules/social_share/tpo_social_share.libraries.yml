@@ -1,0 +1,7 @@
+tpo_social_share:
+  version: 1.0.0
+  js:
+    assets/js/tpo_social_share.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

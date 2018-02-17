@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{% macro menu_links(links, level) %}
+  {% for link in links %}
+    {% if link.include %}
+      <li{% if link.active %} class="active"{% endif %} data-level="{{ level }}">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        {% if link.children %}
+          <span data-toggle="collapse" data-target="#{{ link.page }}" class="tpo-page-menu-trigger glyphicon glyphicon-chevron-down"></span>
+          <ul class="nav nav-list collapse" id="{{ link.page }}">
+            {% set i = level + 1 %}
+            {{ _self.menu_links(link.children, i) }}
+          </ul>
+        {% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{% if content %}
+  {% if tpo_page.sidebar %}
+    <div class="container">
+      <div class="row region region-{{ region|clean_class }} {{ tpo_page.general.class }}" id="{{ tpo_page.general.id }}">
+        <div id="tpo-page-sidebar" class="col-md-3 hidden-sm hidden-xs">
+          <div class="side-menu-wpr group-left group">
+            <ul id="tpo-page-sidebar-menu" class="nav nav-list">
+              {{ _self.menu_links(tpo_page.sidebar.children, 0) }}
+            </ul>
+          </div>
+        </div>
+        <div id="tpo-page-content" class="tpo-pages-with-sidebar col-md-9 col-sm-12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="region region-{{ region|clean_class }} {{ tpo_page.general.class }}" id="{{ tpo_page.general.id }}">
+      <div id="tpo-page-content">
+        {{ content }}
+      </div>
+    </div>
+  {% endif %}
+  </div>
+{% endif %}

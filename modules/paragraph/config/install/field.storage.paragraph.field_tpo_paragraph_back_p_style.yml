@@ -1,0 +1,35 @@
+uuid: e6a25d9d-064a-4b15-af2f-e06ab3fee00f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: bqJEtFLQb8RpnBnq9Px1U3swt5ojYFQHOxlmakN2ZFg
+id: paragraph.field_tpo_paragraph_back_p_style
+field_name: field_tpo_paragraph_back_p_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: color
+      label: 'Solid Color'
+    -
+      value: image
+      label: Image
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+uuid: f76c1f74-e8a8-424b-a32f-11b0c075b528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord__con
+    - field.field.paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord_titl
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: j0TTKeKweO0Br-AzdYI_x0rchEj04j1KLgxOUbSpEos
+id: paragraph.tpo_paragraph_accordion_section.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_accordion_section
+mode: default
+content:
+  field_tpo_paragraph_accord__con:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_accord_titl:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,35 @@
+uuid: 97b00a19-2af9-4a7b-b984-d4195dc2fed0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.paragraph.field_tpo_paragraph_block_cont
+    - paragraphs.paragraphs_type.tpo_paragraph_block_reference
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: lfHWhRu5OJQ4JB6RR7bAk6-ooDNb74NslqoDUT_s2zM
+id: paragraph.tpo_paragraph_block_reference.field_tpo_paragraph_block_cont
+field_name: field_tpo_paragraph_block_cont
+entity_type: paragraph
+bundle: tpo_paragraph_block_reference
+label: 'Block Content'
+description: 'Choose a block from the Custom Block Library to embed in the page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      basic: basic
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

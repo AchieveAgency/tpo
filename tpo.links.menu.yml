@@ -1,0 +1,27 @@
+system.tpo_core:
+  title: 'TrustedPartner'
+  route_name: tpo.tpo_core_settings_form
+  description: 'General settings for TPO Core.'
+  parent: system.admin
+  weight: -1000
+
+system.tpo_core.flush:
+  title: 'Flush Cache'
+  route_name: admin_toolbar_tools.flush
+  description: 'Flush all caches.'
+  parent: system.tpo_core
+  weight: 0
+
+system.tpo_core.settings:
+  title: 'General Settings'
+  route_name: tpo.tpo_core_settings_form
+  description: 'General settings for TPO Core.'
+  parent: system.tpo_core
+  weight: 1
+
+system.tpo_core.modules:
+  title: 'Modules'
+  route_name: tpo.tpo_core_settings_form
+  description: 'Sub-modules for TPO Core.'
+  parent: system.tpo_core
+  weight: 2

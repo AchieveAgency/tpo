@@ -1,0 +1,27 @@
+system.tpo_core.modules.tpo_campaign:
+  title: 'Campaign'
+  route_name: tpo_campaign.settings
+  description: 'Settings for TPO Campaign module.'
+  parent: system.tpo_core.modules
+  weight: 0
+
+system.tpo_core.modules.tpo_campaign.settings:
+  title: 'Settings'
+  route_name: tpo_campaign.settings
+  description: 'Settings for TPO Campaign module.'
+  parent: system.tpo_core.modules.tpo_campaign
+  weight: 0
+
+system.tpo_core.modules.tpo_campaign.collection:
+  title: 'Manage Campaigns'
+  route_name: entity.tpo_campaign.collection
+  description: 'Manage Campaign'
+  parent: system.tpo_core.modules.tpo_campaign
+  weight: 1
+
+system.tpo_core.modules.tpo_campaign.add:
+  title: 'Add Campaign'
+  route_name: entity.tpo_campaign.add_form
+  description: 'Add Campaign'
+  parent: system.tpo_core.modules.tpo_campaign
+  weight: 2

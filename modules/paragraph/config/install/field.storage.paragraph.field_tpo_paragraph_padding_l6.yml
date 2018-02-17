@@ -1,0 +1,26 @@
+uuid: 864b1878-87f2-4d90-86bd-4f290486c3d8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 218fGnVp1CbrbRHFkUzg05C617zFRhbZ7LFd2fQCy7U
+id: paragraph.field_tpo_paragraph_padding_l6
+field_name: field_tpo_paragraph_padding_l6
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

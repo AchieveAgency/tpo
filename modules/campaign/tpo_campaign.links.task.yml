@@ -1,0 +1,22 @@
+# Campaign routing definition
+tpo_campaign.settings_tab:
+  route_name: tpo_campaign.settings
+  title: 'Settings'
+  base_route: tpo_campaign.settings
+
+entity.tpo_campaign.canonical:
+  route_name: entity.tpo_campaign.canonical
+  base_route: entity.tpo_campaign.canonical
+  title: 'View'
+
+entity.tpo_campaign.edit_form:
+  route_name: entity.tpo_campaign.edit_form
+  base_route: entity.tpo_campaign.canonical
+  title: 'Edit'
+
+entity.tpo_campaign.delete_form:
+  route_name:  entity.tpo_campaign.delete_form
+  base_route:  entity.tpo_campaign.canonical
+  title: Delete
+  weight: 10
+

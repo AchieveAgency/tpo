@@ -1,0 +1,28 @@
+uuid: fc649ea0-5f95-43a7-9965-52d1a4634c2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_p_style
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: v58yELqb6auwCdOc-mJt416ceOd1NVgGKzB61zuGShE
+id: paragraph.tpo_paragraph_accordion.field_tpo_paragraph_back_p_style
+field_name: field_tpo_paragraph_back_p_style
+entity_type: paragraph
+bundle: tpo_paragraph_accordion
+label: Style
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

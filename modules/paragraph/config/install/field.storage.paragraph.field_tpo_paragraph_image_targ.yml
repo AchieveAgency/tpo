@@ -1,0 +1,36 @@
+uuid: 9729216f-30ba-49ff-858b-18eb691d0010
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 3g_Aw270oI45joYy563My8ZcnhYolPhtVhc4dUNXrE8
+id: paragraph.field_tpo_paragraph_image_targ
+field_name: field_tpo_paragraph_image_targ
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New Window'
+    -
+      value: _self
+      label: 'Same Window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

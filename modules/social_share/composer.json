@@ -1,0 +1,14 @@
+{
+  "name": "drupal/tpo_social_share",
+  "type": "drupal-module",
+  "description": "Social sharing AddThis integration for TPO.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/tpo_social_share",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/tpo_social_share",
+    "source": "http://cgit.drupalcode.org/tpo_social_share"
+  },
+  "require": { }
+}

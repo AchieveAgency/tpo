@@ -1,0 +1,30 @@
+uuid: 0ea3cc61-ff89-4bc8-9a20-0ec720bb0732
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - paragraphs
+    - viewfield
+    - views
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: Bec46QoAEYDa6V1JO83f8iMVyguwlq0W1My3V27LXas
+id: paragraph.field_tpo_paragraph_view_cont
+field_name: field_tpo_paragraph_view_cont
+entity_type: paragraph
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

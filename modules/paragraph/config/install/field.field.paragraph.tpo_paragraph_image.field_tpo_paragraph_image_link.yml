@@ -1,0 +1,28 @@
+uuid: 69aa7959-f32b-48fb-a57e-66fceb69eec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_image_link
+    - paragraphs.paragraphs_type.tpo_paragraph_image
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - link
+_core:
+  default_config_hash: cq6RmpwX0ZIFxA27Tmp-fvhJ9YxYccgIForDGwE2cUE
+id: paragraph.tpo_paragraph_image.field_tpo_paragraph_image_link
+field_name: field_tpo_paragraph_image_link
+entity_type: paragraph
+bundle: tpo_paragraph_image
+label: 'Link Image to Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

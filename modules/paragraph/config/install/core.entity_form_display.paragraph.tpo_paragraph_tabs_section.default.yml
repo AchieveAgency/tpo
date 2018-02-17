@@ -1,0 +1,44 @@
+uuid: cb9ee6d1-8b23-4cc4-9e40-a97dc3492bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_tabs_section.field_tpo_paragraph_tab_body
+    - field.field.paragraph.tpo_paragraph_tabs_section.field_tpo_paragraph_tab_name
+    - paragraphs.paragraphs_type.tpo_paragraph_tabs_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - paragraphs
+_core:
+  default_config_hash: XlrPcHyo5f0cebTY0kHoxFoaMrbXbSYELJfeMEJaF7c
+id: paragraph.tpo_paragraph_tabs_section.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_tabs_section
+mode: default
+content:
+  field_tpo_paragraph_tab_body:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_tab_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

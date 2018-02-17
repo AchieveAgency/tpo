@@ -1,0 +1,23 @@
+uuid: 7cafda05-9b22-4d33-901e-ad0e06c2102a
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - node
+id: node.field_tpo_page_parent
+field_name: field_tpo_page_parent
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

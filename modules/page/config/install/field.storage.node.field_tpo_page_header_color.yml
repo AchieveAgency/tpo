@@ -1,0 +1,23 @@
+uuid: 7ea39545-e6aa-4b37-9a5f-2dd79d565fe5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - jquery_colorpicker
+    - node
+id: node.field_tpo_page_header_color
+field_name: field_tpo_page_header_color
+entity_type: node
+type: jquery_colorpicker
+settings: {  }
+module: jquery_colorpicker
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

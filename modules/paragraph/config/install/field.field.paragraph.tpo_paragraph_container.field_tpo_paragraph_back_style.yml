@@ -1,0 +1,28 @@
+uuid: 159ae37c-8b56-4b0c-a0cb-4880870f339c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_style
+    - paragraphs.paragraphs_type.tpo_paragraph_container
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: 7kZ7yKBCgxPZRvEhWhvmXfTuHqfI-IMFCi4ZCaI7_W8
+id: paragraph.tpo_paragraph_container.field_tpo_paragraph_back_style
+field_name: field_tpo_paragraph_back_style
+entity_type: paragraph
+bundle: tpo_paragraph_container
+label: Style
+description: "- Default will inherit the default theme settings<br>\r\n- Solid Color is a solid color background<br>\r\n- Image is an image in the background<br>\r\n- Video is a looping video background<br><br>\r\n<b>Style Settings</b>"
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

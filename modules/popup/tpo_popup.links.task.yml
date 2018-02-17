@@ -1,0 +1,22 @@
+# Popup routing definition
+tpo_popup.settings_tab:
+  route_name: tpo_popup.settings
+  title: 'Settings'
+  base_route: tpo_popup.settings
+
+entity.tpo_popup.canonical:
+  route_name: entity.tpo_popup.canonical
+  base_route: entity.tpo_popup.canonical
+  title: 'View'
+
+entity.tpo_popup.edit_form:
+  route_name: entity.tpo_popup.edit_form
+  base_route: entity.tpo_popup.canonical
+  title: 'Edit'
+
+entity.tpo_popup.delete_form:
+  route_name:  entity.tpo_popup.delete_form
+  base_route:  entity.tpo_popup.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,79 @@
+uuid: 23999fe5-07e0-4b9a-9ed1-5b97c5576074
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_view_cont
+    - paragraphs.paragraphs_type.tpo_paragraph_view
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - viewfield
+_core:
+  default_config_hash: bUej-EvOLXEPbhCrWOfMwvyNz1RCzR2VeJCY6Pcjh8c
+id: paragraph.tpo_paragraph_view.field_tpo_paragraph_view_cont
+field_name: field_tpo_paragraph_view_cont
+entity_type: paragraph
+bundle: tpo_paragraph_view
+label: 'View Content'
+description: 'Choose a view to embed in the page.<br><br>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: 0
+  allowed_views:
+    blog_index: blog_index
+    directory_entry_index: directory_entry_index
+    document_index: document_index
+    news_index: news_index
+    photo_index: photo_index
+    article_admin: 0
+    basic_page_admin: 0
+    blog_admin: 0
+    category_tag_s_: 0
+    content: 0
+    block_content: 0
+    default_search_index: 0
+    directory_entry_admin: 0
+    document_admin: 0
+    entityqueue_slideshows: 0
+    event_content_admin: 0
+    event_calendars: 0
+    event_details: 0
+    file_entity_browser: 0
+    files: 0
+    frontpage: 0
+    landing_page_admin: 0
+    location_directory_admin: 0
+    locations_page: 0
+    header_media: 0
+    media_slideshow_paragraph: 0
+    news_category_tag_s_: 0
+    tpo_page: 0
+    paragraph_vbo: 0
+    user_admin_people: 0
+    photo_details: 0
+    photos_admin: 0
+    content_recent: 0
+    redirect: 0
+    related_documents_links: 0
+    scheduler_scheduled_content: 0
+    start_end_date: 0
+    author_browser: 0
+    taxonomy_term: 0
+    tpo_popup_admin_view: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  allowed_display_types:
+    block: block
+    entity_browser: 0
+    feed: 0
+    default: 0
+    page: 0
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

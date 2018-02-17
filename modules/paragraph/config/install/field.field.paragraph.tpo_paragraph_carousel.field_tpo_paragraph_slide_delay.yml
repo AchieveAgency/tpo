@@ -1,0 +1,27 @@
+uuid: e805f800-d270-4c9d-8068-aad8b8e4441d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_slide_delay
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+_core:
+  default_config_hash: t-L5W-3-dFrmj76TenpvPYxNP9XExs1Uu1NJlwQWOqg
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_slide_delay
+field_name: field_tpo_paragraph_slide_delay
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: 'Slide Delay'
+description: 'Set the duration to display a slide before transitioning to the next.<br><br>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: Seconds
+field_type: integer

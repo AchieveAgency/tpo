@@ -1,0 +1,5 @@
+services:
+  tpo_themekit.twig.TIDtoNameTwigExtension:
+    class: Drupal\tpo_themekit\TIDtoNameTwigExtension
+    tags:
+      - { name: twig.extension }

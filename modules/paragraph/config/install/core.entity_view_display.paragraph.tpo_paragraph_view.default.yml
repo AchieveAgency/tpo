@@ -1,0 +1,157 @@
+uuid: 1a96637b-3cf1-406b-aa77-ddcb5308494d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_back_color
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_back_img_st
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_back_p_style
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_class
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_id
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_image
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_margin_
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_margin_left
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_margin_righ
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_margin_top
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_padding_bot
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_padding_lef
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_padding_rig
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_padding_top
+    - field.field.paragraph.tpo_paragraph_view.field_tpo_paragraph_view_cont
+    - paragraphs.paragraphs_type.tpo_paragraph_view
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - image
+    - jquery_colorpicker
+    - options
+    - viewfield
+_core:
+  default_config_hash: orvfp67xdbdc0CapCF-jFcd8FlkpKCwiQKMOI5whw9U
+id: paragraph.tpo_paragraph_view.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_view
+mode: default
+content:
+  field_tpo_paragraph_back_color:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: jquery_colorpicker_color_display
+    region: content
+  field_tpo_paragraph_back_img_st:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_back_p_style:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_class:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_id:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_image:
+    weight: 13
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_margin_:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_left:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_righ:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_top:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_bot:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_lef:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_rig:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_top:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_view_cont:
+    weight: 1
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+hidden: {  }

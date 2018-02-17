@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains tpo_themekit.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tpo_themekit_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tpo_themekit module.
+    case 'help.page.tpo_themekit':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Theme submodule kit for TPO.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tpo_themekit_theme() {
+  return [
+    'tpo_themekit' => [
+      'render element' => 'children',
+    ],
+  ];
+}

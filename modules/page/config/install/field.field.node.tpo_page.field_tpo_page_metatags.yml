@@ -1,0 +1,25 @@
+uuid: 81568f9b-ef90-4fce-97d0-0ca80df7ba10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_metatags
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - metatag
+id: node.tpo_page.field_tpo_page_metatags
+field_name: field_tpo_page_metatags
+entity_type: node
+bundle: tpo_page
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

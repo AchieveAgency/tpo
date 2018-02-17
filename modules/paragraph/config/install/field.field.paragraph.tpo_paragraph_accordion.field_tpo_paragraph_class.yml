@@ -1,0 +1,41 @@
+uuid: 6d1753b4-8571-4ebd-97ca-2157e02ab11e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_class
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: pEMKcv1P6vuuX4dngEcaLI4ve1B4thM_UlU9QJBzK_o
+id: paragraph.tpo_paragraph_accordion.field_tpo_paragraph_class
+field_name: field_tpo_paragraph_class
+entity_type: paragraph
+bundle: tpo_paragraph_accordion
+label: Class
+description: 'Customize the styling of this accordion by adding CSS classes. Separate multiple classes by spaces.<br><br>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

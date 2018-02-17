@@ -1,0 +1,27 @@
+uuid: b7743910-9dd8-4499-8a5c-cbe055a897c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_header_image_mode
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - options
+id: node.tpo_page.field_tpo_page_header_image_mode
+field_name: field_tpo_page_header_image_mode
+entity_type: node
+bundle: tpo_page
+label: 'Background Image Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Cover
+default_value_callback: ''
+settings: {  }
+field_type: list_string

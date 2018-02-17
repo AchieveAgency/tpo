@@ -1,0 +1,5 @@
+entity.tpo_popup.add_form:
+  route_name: entity.tpo_popup.add_form
+  title: 'Add Popup'
+  appears_on:
+    - entity.tpo_popup.collection

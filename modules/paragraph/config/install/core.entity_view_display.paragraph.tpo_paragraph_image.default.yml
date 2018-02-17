@@ -1,0 +1,177 @@
+uuid: 8e737f0a-e400-4ce9-9faf-d171e70b5f10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_2_image
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_back_color
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_back_img_st
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_back_p_style
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_class
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_id
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_image
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_image_link
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_image_targ
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_margin_
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_margin_left
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_margin_righ
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_margin_top
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_padding_bot
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_padding_lef
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_padding_rig
+    - field.field.paragraph.tpo_paragraph_image.field_tpo_paragraph_padding_top
+    - paragraphs.paragraphs_type.tpo_paragraph_image
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - image
+    - jquery_colorpicker
+    - link
+    - options
+_core:
+  default_config_hash: AHE1qVNwQq6x9vI9l9vwd1w3AnrXdiCnpEY6VdE_b2s
+id: paragraph.tpo_paragraph_image.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_image
+mode: default
+content:
+  field_tpo_paragraph_2_image:
+    weight: 16
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_back_color:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: jquery_colorpicker_color_display
+    region: content
+  field_tpo_paragraph_back_img_st:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_back_p_style:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_class:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_id:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_image_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_tpo_paragraph_image_targ:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_margin_:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_left:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_righ:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_top:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_bot:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_lef:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_rig:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_top:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

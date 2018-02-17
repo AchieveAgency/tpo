@@ -1,0 +1,22 @@
+uuid: 271af17b-2d2b-4cf9-8a8d-13311cb4ff48
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: OdPjsZsBcaFeI-Ibv_q4DTW0uvl7Sl70nquZp6DiWHE
+id: node.field_tpo_popup_display_mode
+field_name: field_tpo_popup_display_mode
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

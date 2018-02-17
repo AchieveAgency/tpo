@@ -1,0 +1,27 @@
+uuid: 8251cec0-ff5f-4cd3-8f13-cc962567dbba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_impression
+    - node.type.tpo_popup
+_core:
+  default_config_hash: sPRy3DNsxQF2Z6SoeHNKZP3_HhGXMOkZlxKfhzkkmPw
+id: node.tpo_popup.field_tpo_popup_impression
+field_name: field_tpo_popup_impression
+entity_type: node
+bundle: tpo_popup
+label: Impressions
+description: 'The number of times a user can view the popup before it will not show again'
+required: true
+translatable: false
+default_value:
+  -
+    value: 100
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

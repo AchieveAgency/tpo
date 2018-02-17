@@ -1,0 +1,23 @@
+uuid: 482abb67-940a-47bf-a2c6-940a62d0152e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_link
+    - node.type.tpo_popup
+  module:
+    - link
+id: node.tpo_popup.field_tpo_popup_link
+field_name: field_tpo_popup_link
+entity_type: node
+bundle: tpo_popup
+label: Route
+description: "Page you would like your popup to display on<br>\r\nTo display popups on all pages type /*.  To add to a specific type of content such as events type /event/*.<br><br>\r\n<b>* Will not display on admin routes, or for admin users.</b>\r\n<br><br>\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link

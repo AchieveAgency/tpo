@@ -1,0 +1,25 @@
+uuid: 18fe81fc-b8d1-4935-97c3-6565a11c98c6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: f6LX942JlZYQWO5uQIGbE8QgDCDGg_cybJYZrlontz4
+id: paragraph.field_tpo_paragraph_carousel_co
+field_name: field_tpo_paragraph_carousel_co
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

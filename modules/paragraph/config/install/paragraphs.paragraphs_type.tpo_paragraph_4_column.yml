@@ -1,0 +1,11 @@
+uuid: e9a6b920-800b-48fc-8a23-6afde668b56d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ixYRs3FZynNllEojbMTdfEHMrWy6qxuNfE63Y3vTpH8
+id: tpo_paragraph_4_column
+label: 'Row (4 Column)'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+uuid: 837aaef6-5530-4e90-a113-707ac83787e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_btn_icn_pos
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: jLAJ4mecYsTiNQ9S8LXyf8xboIsNSImpNYw2qO16ZvI
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_btn_icn_pos
+field_name: field_tpo_paragraph_btn_icn_pos
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: 'Icon Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

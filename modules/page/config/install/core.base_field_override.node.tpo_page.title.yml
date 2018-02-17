@@ -1,0 +1,18 @@
+uuid: ba91691f-47d8-4966-9e9f-6101d12e5965
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tpo_page
+id: node.tpo_page.title
+field_name: title
+entity_type: node
+bundle: tpo_page
+label: 'Page Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

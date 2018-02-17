@@ -1,0 +1,37 @@
+uuid: c142a8c4-de5e-4c5b-8cff-79261f736e24
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - node
+    - options
+id: node.field_tpo_page_header_image_mode
+field_name: field_tpo_page_header_image_mode
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: cover
+      label: Cover
+    -
+      value: contain
+      label: Contain
+    -
+      value: no-repeat
+      label: 'No Repeat'
+    -
+      value: repeat
+      label: Repeat
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

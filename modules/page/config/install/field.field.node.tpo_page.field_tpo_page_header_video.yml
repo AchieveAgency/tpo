@@ -1,0 +1,31 @@
+uuid: bbb135d5-e40e-4e97-a884-2fa9dfe77c8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_header_video
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - file
+id: node.tpo_page.field_tpo_page_header_video
+field_name: field_tpo_page_header_video
+entity_type: node
+bundle: tpo_page
+label: 'Background Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: '10 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,23 @@
+uuid: fd8f2628-6198-408c-93e2-36fdd766ac1c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - metatag
+    - node
+id: node.field_tpo_page_metatags
+field_name: field_tpo_page_metatags
+entity_type: node
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: dc7bd614-d369-4af3-bdf3-2fa443e702ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_key_control
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+_core:
+  default_config_hash: YwXCsF1SnAeGxH9iOSwB8OJo1I3OJJfUHKjn80tjZC4
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_key_control
+field_name: field_tpo_paragraph_key_control
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: 'Keyboard Control'
+description: 'Allow the carousel to be controlled with keyboard arrows<br><br>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

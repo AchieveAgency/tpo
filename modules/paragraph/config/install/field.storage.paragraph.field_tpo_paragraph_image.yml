@@ -1,0 +1,39 @@
+uuid: 5f7ef1c7-eb3d-429d-a06d-c9655d4d4e9b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - file
+    - image
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: Owl_nD2qh065DW4Og2y9eERSdz4IcNPo2H-13uQoKGw
+id: paragraph.field_tpo_paragraph_image
+field_name: field_tpo_paragraph_image
+entity_type: paragraph
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

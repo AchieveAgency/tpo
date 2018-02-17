@@ -1,0 +1,108 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################Slide Delay ########################################}
+{% if content.field_tpo_paragraph_slide_delay['#object'] %}
+{% set slide_delay_seconds = (content.field_tpo_paragraph_slide_delay.0['#markup']|render|striptags|trim * 1000 ) %}
+{% set slide_delay = 'data-interval=' ~ slide_delay_seconds ~ ' ' %}
+{% else %}
+{% set slide_delay = '' %}
+{% endif %}
+
+{#############################Carousel Behavior########################################}
+{% if content.field_tpo_paragraph_slide_behav['#object'] %}
+{% set carousel_behavior = content.field_tpo_paragraph_slide_behav.0['#markup']|render|striptags|trim %}
+{% if carousel_behavior == 'autoplay' %}
+{% set carousel_pause = 'data-pause=null ' %}
+{% elseif carousel_behavior == 'pause' %}
+{% set carousel_pause = 'data-pause=hover ' %}
+{% endif %}
+{% endif %}
+
+{#############################Carousel Behavior########################################}
+{% if content.field_tpo_paragraph_carousel_co['#object'] %}
+{% set carousel_content = content.field_tpo_paragraph_carousel_co %}
+{% endif %}
+
+{#############################keyboard Behavior########################################}
+{% if 'On' in content.field_tpo_paragraph_key_control[0] %}
+{% set keyboard_controls = 'data-keyboard=true ' %}
+{% else %}
+{% set keyboard_controls = 'data-keyboard=false ' %}
+{% endif %}
+
+{#############################Slide Indicator Behavior########################################}
+{% if 'On' in content.field_tpo_paragraph_slide_indic[0] %}
+{% set enable_slide_indicator = true %}
+{% else %}
+{% set enable_slide_indicator = false %}
+{% endif %}
+
+{#############################Slide Wrapping Behavior########################################}
+{% if 'On' in content.field_tpo_paragraph_slide_wrap[0] %}
+{% set slide_wrapping = 'data-wrap=true ' %}
+{% else %}
+{% set slide_wrapping = 'data-wrap=false ' %}
+{% endif %}
+
+{#############################Swipe Control Behavior########################################}
+{% if 'On' in content.field_tpo_paragraph_swipe_contr[0] %}
+{% set swipe_control_class = 'tpo-paragraph-carousel-swipe ' %}
+{% else %}
+{% set swipe_control_class = '' %}
+{% endif %}
+
+{#############################Sets Default Variables########################################}
+
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set carousel_class = [
+    "tpo-paragraph-carousel",
+    "carousel",
+    "slide",
+    "tpo-paragraph-content",
+    swipe_control_class,
+    tpo_paragraph.class ? tpo_paragraph.class,
+  ]
+%}
+
+{%
+  set carousel_id = (tpo_paragraph.id is not null and tpo_paragraph.id is not empty  ? tpo_paragraph.id|clean_id:"tpo-paragraph-carousel-" ~ paragraph.id())
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+
+<div {{ global.add_id( carousel_id ) }} {{ global.add_classes( carousel_class ) }}  data-ride="carousel" {{slide_delay}} {{carousel_pause}} {{keyboard_controls}} {{slide_wrapping}} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+  <!-- Indicators -->
+  {% if enable_slide_indicator %}
+  <ol class="carousel-indicators">
+    {% for key, item in content.field_tpo_paragraph_carousel_co if key|first != '#' %}
+      <li class="{% if loop.first %}active{% endif %}" data-slide-to="{{ key }}" data-target="#{{ carousel_id }}"></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+
+  <!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+    {% for key, item in content.field_tpo_paragraph_carousel_co if key|first != '#' %}
+      <div class="paragraph--layout-slideshow__slide-{{ key + 1 }} item carousel-item{% if loop.first %} active{% endif %}" role="listitem">{{ item }}</div>
+    {% endfor %}
+</div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#{{carousel_id}}" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#{{carousel_id}}" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+{############################# Ends paragraph markup ########################################}

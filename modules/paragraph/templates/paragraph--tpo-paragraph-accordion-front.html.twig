@@ -1,0 +1,39 @@
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set accordion_classes = [
+    "tpo-paragraph-accordion",
+    "panel-group",
+    tpo_paragraph.class ? tpo_paragraph.class,
+    "tpo-paragraph-content",
+  ]
+%}
+
+{%
+  set accordion_id = (tpo_paragraph.id is not null and tpo_paragraph.id is not empty  ? tpo_paragraph.id|clean_id:"tpo-paragraph-accordion-" ~ paragraph.id())
+%}
+
+{############################# Begins paragraph markup ########################################}
+<div {{ global.add_classes( accordion_classes ) }} {{ global.add_id( accordion_id ) }}  role="tablist" aria-multiselectable="true" style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+  {% for key, item in content.field_tpo_paragraph_accord_sec if key|first != '#' %}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="accordion--{{accordion_id}}-{{ item['#paragraph'].field_tpo_paragraph_accord_titl.value }}">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#{{accordion_id}}" href="#accordion--{{accordion_id}}-{{ key }}" aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="{{ item['#paragraph'].field_tpo_paragraph_accord_titl.value }}">
+                    {{ item['#paragraph'].field_tpo_paragraph_accord_titl.value }}
+                </a>
+            </h4>
+        </div>
+        <div id="accordion--{{accordion_id}}-{{ key }}" class="panel-collapse collapse {% if loop.first %}in{% endif %}" role="tabpanel" aria-labelledby="accordion--{{accordion_id}}-{{ item['#paragraph'].field_tpo_paragraph_accord_titl.value }}">
+            <div class="panel-body">
+                {{item}}
+            </div>
+        </div>
+    </div>
+  {% endfor %}
+</div>
+{############################# Ends paragraph markup ########################################}

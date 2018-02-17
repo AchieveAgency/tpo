@@ -1,0 +1,44 @@
+uuid: 7accd06a-fa05-4558-9ee9-531511562e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord__con
+    - field.field.paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord_titl
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - paragraphs
+_core:
+  default_config_hash: QAgTK_yRxeuPJ03MHGr-Cqo51ERq7BjVmPZTMEQ0cFU
+id: paragraph.tpo_paragraph_accordion_section.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_accordion_section
+mode: default
+content:
+  field_tpo_paragraph_accord__con:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_accord_titl:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

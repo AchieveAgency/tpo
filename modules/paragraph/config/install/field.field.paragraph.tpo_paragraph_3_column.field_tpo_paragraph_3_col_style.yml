@@ -1,0 +1,28 @@
+uuid: d427c7af-9c56-48ca-9cb6-11bfb3b72dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_3_col_style
+    - paragraphs.paragraphs_type.tpo_paragraph_3_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: xS2uajlK0xFO5IdO9BWvxLU7RAj2Gc3Fa3UxFqFYKxc
+id: paragraph.tpo_paragraph_3_column.field_tpo_paragraph_3_col_style
+field_name: field_tpo_paragraph_3_col_style
+entity_type: paragraph
+bundle: tpo_paragraph_3_column
+label: 'Column Sizes'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: paragraph-style-33-33-33
+default_value_callback: ''
+settings: {  }
+field_type: list_string

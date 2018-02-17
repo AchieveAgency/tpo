@@ -1,0 +1,38 @@
+uuid: 646fde9c-3652-4218-b1ee-d1186b9a1be0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_raw_code
+    - paragraphs.paragraphs_type.tpo_paragraph_4_column
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: X1-oZoTSJJjuIVrS4ekMVzic1F0lCpdny3QDp1TClOg
+id: paragraph.tpo_paragraph_4_column.field_tpo_paragraph_raw_code
+field_name: field_tpo_paragraph_raw_code
+entity_type: paragraph
+bundle: tpo_paragraph_4_column
+label: 'Row Description'
+description: '<b>Admin Use Only</b><br>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

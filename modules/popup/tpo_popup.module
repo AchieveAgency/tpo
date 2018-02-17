@@ -1,0 +1,140 @@
+<?php
+
+/**
+ * @file
+ * Contains tpo_popup.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tpo_popup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tpo_popup module.
+    case 'help.page.tpo_popup':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Popup manager for TPO.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tpo_popup_theme() {
+  return [
+    'tpo_popup' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+function tpo_popup_page_attachments(array &$attachments) {
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if (
+    !(\Drupal::service('router.admin_context')->isAdminRoute($route)) // not admin page
+  ) {
+    $popups = [];
+
+    $flatten_array = function($array) {
+      $result = [];
+      array_walk_recursive($array, function($v, $k) use (&$result) {
+        $result[] = str_replace('internal:',\Drupal::request()->getSchemeAndHttpHost(),$v);
+      });
+      return $result;
+    };
+
+    $add_node_to_popups = function($node) use (&$popups) {
+      $get_referenced_term_name = function($reference) {
+        if (is_array($reference) && isset($reference[0]) && isset($reference[0]['target_id'])) {
+          $tid = $reference[0]['target_id'];
+          if ($term = \Drupal\taxonomy\Entity\Term::load($tid)) {
+            return $term->get('name')->value;
+          }
+        }
+        else {
+          return false;
+        }
+      };
+
+      $get_referenced_entity_name = function($reference,$type="node") {
+        if (is_array($reference) && isset($reference[0]) && isset($reference[0]['target_id'])) {
+          $eid = $reference[0]['target_id'];
+          $entity = \Drupal::entityTypeManager()->getStorage($type)->load($eid);
+          if (isset($entity)) {
+            return $entity->get('name')->value;
+          }
+        }
+        else {
+          return false;
+        }
+      };
+
+      $get_body_for_node = function($node) {
+        $view_builder = \Drupal::entityManager()->getViewBuilder('node');
+        $render_array = $view_builder->view($node);
+        return \Drupal::service('renderer')->renderRoot($render_array);
+      };
+
+      $popups[$node->id()] = [
+        'title' => $node->get('title')->value,
+        'body' => $get_body_for_node($node),
+        'impressions' => $node->get('field_tpo_popup_impression')->value,
+        'action' => [
+          'display' => $get_referenced_term_name($node->get('field_tpo_popup_display_mode')->getValue()),
+          'scroll' => $node->get('field_tpo_popup_scroll')->value,
+          'delay' => $node->get('field_tpo_popup_delay')->value
+        ],
+        'campaign' => $get_referenced_entity_name($node->get('field_tpo_popup_campaign')->getValue(),'tpo_campaign')
+      ];
+    };
+
+    //Used to pull up the node path of the current page. IF no node path return null
+    $internal_path = 'internal:'.\Drupal::request()->getRequestUri();
+    if (\Drupal::routeMatch()->getParameter('node') !== NULL){
+      $node_path = 'entity:node/'.\Drupal::routeMatch()->getParameter('node')->id();
+    }
+    else{
+      $node_path = NULL;
+    }
+
+    // get direct matches
+    $direct_match_ids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'tpo_popup')
+      ->condition('field_tpo_popup_link', array($internal_path, $node_path), 'IN')
+      ->execute();
+
+    foreach (\Drupal::entityTypeManager()->getStorage('node')->loadMultiple($direct_match_ids) as $node) {
+      $add_node_to_popups($node);
+    }
+
+    // get wildcard matches
+    $wildcard_match_ids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'tpo_popup')
+      ->condition('field_tpo_popup_link','*','CONTAINS')
+      ->execute();
+
+    foreach (\Drupal::entityTypeManager()->getStorage('node')->loadMultiple($wildcard_match_ids) as $node) {
+      $routes = $flatten_array($node->get('field_tpo_popup_link')->getValue());
+      foreach ($routes as $route) {
+        $pattern = '|^'.str_replace('/*','.*',$route).'$|';
+        $current_path = \Drupal::request()->getSchemeAndHttpHost().\Drupal::request()->getRequestUri();
+
+        if (preg_match($pattern, $current_path) === 1) {
+          $add_node_to_popups($node);
+          break;
+        }
+      }
+    }
+
+    $attachments['#attached']['library'][] = 'tpo_popup/tpo_popup';
+    $attachments['#attached']['drupalSettings']['tpo_popup'] = $popups;
+  }
+}

@@ -1,0 +1,93 @@
+uuid: a6f91f20-5496-4001-900c-3c92c1775f3e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: SWhErHL8sKHHvOo-ZCfd6C6WKk7WnBnai6O-RMDnAHo
+id: paragraph.field_tpo_paragraph_cta_link_fx
+field_name: field_tpo_paragraph_cta_link_fx
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hvr-lnk-raise
+      label: 'Border & Raise'
+    -
+      value: hvr-ripple-out
+      label: 'Ripple Out'
+    -
+      value: hvr-ripple-in
+      label: 'Ripple In'
+    -
+      value: hvr-grow
+      label: Grow
+    -
+      value: hvr-shrink
+      label: Shrink
+    -
+      value: hvr-pulse
+      label: Pulse
+    -
+      value: hvr-pulse-grow
+      label: 'Pulse Grow'
+    -
+      value: hvr-pulse-shrink
+      label: 'Pulse Shrink'
+    -
+      value: hvr-push
+      label: Push
+    -
+      value: hvr-pop
+      label: Pop
+    -
+      value: hvr-bounce-in
+      label: 'Bounce In'
+    -
+      value: hvr-bounce-out
+      label: 'Bounce Out'
+    -
+      value: hvr-rotate
+      label: Rotate
+    -
+      value: hvr-grow-rotate
+      label: 'Hover Grow Rotate'
+    -
+      value: hvr-float
+      label: Float
+    -
+      value: hvr-sink
+      label: Sink
+    -
+      value: hvr-bob
+      label: Bob
+    -
+      value: hvr-hang
+      label: Hang
+    -
+      value: hvr-skew
+      label: Skew
+    -
+      value: hvr-skew-forward
+      label: 'Skew Forward'
+    -
+      value: hvr-skew-backward
+      label: 'Skew Backward'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

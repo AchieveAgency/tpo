@@ -1,0 +1,24 @@
+uuid: 344c577e-1c85-4216-b155-73a406d0823f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - jquery_colorpicker
+    - paragraphs
+_core:
+  default_config_hash: QDOnWlpXe-MioQjafTi8liGWMPHz9F3uEdS8SdOyKnQ
+id: paragraph.field_tpo_paragraph_back_color
+field_name: field_tpo_paragraph_back_color
+entity_type: paragraph
+type: jquery_colorpicker
+settings: {  }
+module: jquery_colorpicker
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

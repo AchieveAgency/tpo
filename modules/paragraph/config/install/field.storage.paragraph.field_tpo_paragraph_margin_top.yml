@@ -1,0 +1,26 @@
+uuid: dce1d908-9b28-4cbe-b26d-83086204f480
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - paragraphs
+_core:
+  default_config_hash: oPibOhDsLL5oH5FxMRzF5VqkcZYVvEOZIR_2RAvlIIs
+id: paragraph.field_tpo_paragraph_margin_top
+field_name: field_tpo_paragraph_margin_top
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

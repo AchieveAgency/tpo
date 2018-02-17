@@ -1,0 +1,98 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_column_1['#object'] %}
+{% set column_one = content.field_tpo_paragraph_column_1 %}
+{% else %}
+{% set column_one = false %}
+{% endif %}
+
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_column_2['#object'] %}
+{% set column_two = content.field_tpo_paragraph_column_2 %}
+{% else %}
+{% set column_two = false %}
+{% endif %}
+
+{#############################Column Style Variable########################################}
+{% if content.field_tpo_paragraph_2_col_style['#object'] %}
+{% set column_style = content.field_tpo_paragraph_2_col_style|render|striptags|trim %}
+{% else %}
+{% set column_style = false %}
+{% endif %}
+
+
+{#############################Sets Default Variables########################################}
+{% set column_1_style = ""%}
+{% set column_2_style = ""%}
+
+
+{% if column_style %}
+{% if column_style == "paragraph-style-50-50" %}
+{% set column_1_style = "col-md-6"%}
+{% set column_2_style = "col-md-6"%}
+{% elseif column_style == "paragraph-style-75-25" %}
+{% set column_1_style = "col-md-9"%}
+{% set column_2_style = "col-md-3"%}
+{% elseif column_style == "paragraph-style-66-33" %}
+{% set column_1_style = "col-md-8"%}
+{% set column_2_style = "col-md-4"%}
+{% elseif column_style == "paragraph-style-25-75" %}
+{% set column_1_style = "col-md-3"%}
+{% set column_2_style = "col-md-9"%}
+{% elseif column_style == "paragraph-style-33-66" %}
+{% set column_1_style = "col-md-4"%}
+{% set column_2_style = "col-md-8"%}
+{% endif %}
+{% endif %}
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set row_classes = [
+    "row",
+    "tpo-paragraph-row",
+    "tpo-paragraph-two-column",
+    tpo_paragraph.class ? tpo_paragraph.class,
+  ]
+%}
+
+{%
+    set column_1_classes = [
+      column_1_style,
+      "col-sm-12",
+      "tpo-paragraph-column-one",
+      "tpo-paragraph-column",
+    ]
+  %}
+
+  {%
+    set column_2_classes = [
+      column_2_style,
+      "col-sm-12",
+      "tpo-paragraph-column-two",
+      "tpo-paragraph-column",
+    ]
+  %}
+  
+
+{%
+  set row_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+<div {{ global.add_classes( row_classes ) }} {{ global.add_id( row_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+    <div {{ global.add_classes( column_1_classes  ) }} style="{{ global.add_padding( tpo_paragraph.column_one_padding ) }}" >
+        {{column_one}}
+    </div>
+    <div {{ global.add_classes( column_2_classes  ) }} style="{{ global.add_padding( tpo_paragraph.column_two_padding) }}" >
+        {{column_two}}
+    </div>
+</div>
+
+{############################# Ends paragraph markup ########################################}
+    

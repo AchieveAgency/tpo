@@ -1,0 +1,43 @@
+uuid: 8a1bd6a7-3f24-484f-a16f-6c477e2513cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_image
+    - paragraphs.paragraphs_type.tpo_paragraph_2_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - image
+_core:
+  default_config_hash: 9m5RT9GTzd6yzRLEmAna_N3J3evclcwgLQ95I4wL_-E
+id: paragraph.tpo_paragraph_2_column.field_tpo_paragraph_image
+field_name: field_tpo_paragraph_image
+entity_type: paragraph
+bundle: tpo_paragraph_2_column
+label: 'Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

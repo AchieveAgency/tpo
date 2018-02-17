@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains tpo_campaign.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tpo_campaign_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tpo_campaign module.
+    case 'help.page.tpo_campaign':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Campaign feature for TPO.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tpo_campaign_theme() {
+  return [
+    'tpo_campaign' => [
+      'render element' => 'children',
+    ],
+  ];
+}

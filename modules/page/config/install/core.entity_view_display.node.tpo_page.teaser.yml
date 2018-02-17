@@ -1,0 +1,22 @@
+uuid: b97a6982-c174-4634-abe0-23e6f3d51c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - user
+id: node.tpo_page.teaser
+targetEntityType: node
+bundle: tpo_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

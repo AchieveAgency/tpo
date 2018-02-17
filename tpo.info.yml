@@ -1,0 +1,5 @@
+name: TPO Core (TrustedPartner Open)
+type: module
+description: Defines common functionality for all TPO modules.
+core: 8.x
+package: TPO

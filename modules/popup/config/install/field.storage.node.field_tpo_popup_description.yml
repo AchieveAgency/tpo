@@ -1,0 +1,23 @@
+uuid: 05056607-1aba-4c52-803d-8de78dea7a42
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: LEMSBy-RyVPNay8J9b0-OJwMjxYbMdVaC5zABEca27E
+id: node.field_tpo_popup_description
+field_name: field_tpo_popup_description
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

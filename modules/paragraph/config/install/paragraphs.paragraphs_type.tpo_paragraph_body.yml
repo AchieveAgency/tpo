@@ -1,0 +1,11 @@
+uuid: 63cf39e9-525e-42e1-8916-de6facdab645
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-pPnWAVrtVoOMXWY3-ia1YGuVJFMXuyeNWSXTR6xCGs'
+id: tpo_paragraph_body
+label: Body
+icon_uuid: null
+description: null
+behavior_plugins: {  }

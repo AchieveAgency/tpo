@@ -1,0 +1,41 @@
+uuid: 13f295bd-68d8-4d65-93c4-79f4c7324e9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_class
+    - paragraphs.paragraphs_type.tpo_paragraph_webform
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: jUJeTrK2c0nj9nKEAtPDd4SKimrrLlRAysFVI5CuWIo
+id: paragraph.tpo_paragraph_webform.field_tpo_paragraph_class
+field_name: field_tpo_paragraph_class
+entity_type: paragraph
+bundle: tpo_paragraph_webform
+label: Class
+description: 'Customize the styling of this form by adding CSS classes. Separate multiple classes by spaces.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: e1ae2717-e2d3-4fc6-95d5-c332e4b210ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_raw_code
+    - paragraphs.paragraphs_type.tpo_paragraph_raw_code
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: JbJIxv2u93B2Znu6Dp6XJ2cVKbvLP6r_DPaawa9B6Hc
+id: paragraph.tpo_paragraph_raw_code.field_tpo_paragraph_raw_code
+field_name: field_tpo_paragraph_raw_code
+entity_type: paragraph
+bundle: tpo_paragraph_raw_code
+label: 'Raw Code'
+description: 'Used for code snippets, tracking pixels, custom html code, and iframes.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,8 @@
+name: TPO Social Share
+type: module
+description: Social sharing AddThis integration for TPO.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo
+  - tpo_campaign

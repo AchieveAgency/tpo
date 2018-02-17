@@ -1,0 +1,11 @@
+uuid: 7284babb-318e-47ac-8011-6c375f8c9cb1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oBxSJNNQ4WZ_H1A_l6lGSc7hc26kyTBI-OFvTkRryHw
+id: tpo_paragraph_block_reference
+label: 'Block Reference'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

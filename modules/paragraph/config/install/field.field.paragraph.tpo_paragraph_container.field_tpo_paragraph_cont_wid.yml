@@ -1,0 +1,28 @@
+uuid: f1ba0677-be8e-4d1a-bf4d-80ce37d8ca0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_cont_wid
+    - paragraphs.paragraphs_type.tpo_paragraph_container
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: IppGBekbwDoX6S5gNcdC6P1Jt7ObrfRevnqHUHwd2vY
+id: paragraph.tpo_paragraph_container.field_tpo_paragraph_cont_wid
+field_name: field_tpo_paragraph_cont_wid
+entity_type: paragraph
+bundle: tpo_paragraph_container
+label: 'Section Style'
+description: "- Full Width sets the container background to take up the whole screen keeping content default<br>\r\n- Full Width, Stretch Content stretches the content with the container<br>\r\n- Parallax sets the container to have a fixed background on scroll. Must use a full page image<br>\r\n- Parallax, Stretch Content stretched the content with the parallax container<br><br>"
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

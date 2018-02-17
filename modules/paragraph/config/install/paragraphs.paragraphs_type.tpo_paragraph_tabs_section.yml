@@ -1,0 +1,11 @@
+uuid: e2f2fc4c-959b-4dcb-8533-8f2704de7a70
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Dg7MXHJ1GqONt1BswK5qaPX3oKJ_t7Uw3g5JdwbFlLI
+id: tpo_paragraph_tabs_section
+label: 'Tabs Section'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

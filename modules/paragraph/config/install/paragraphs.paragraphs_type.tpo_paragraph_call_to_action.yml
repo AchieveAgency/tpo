@@ -1,0 +1,11 @@
+uuid: c6ee7ec5-f500-45e5-bd5a-640240e865f6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: W3T39roZhvbvhCaMyvLkXQCjE2gLZfKFOFyRlPWCA3Q
+id: tpo_paragraph_call_to_action
+label: 'Call To Action'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

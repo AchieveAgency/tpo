@@ -1,0 +1,13 @@
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_accord__con['#object'] %}
+    {% set accordion_content = content.field_tpo_paragraph_accord__con %}
+{% else %}
+    {% set accordion_content = false %}
+{% endif %}
+
+
+{############################# Begins paragraph markup ########################################}
+{% if accordion_content %}
+{{accordion_content}}
+{% endif %}
+{############################# Ends paragraph markup ########################################}

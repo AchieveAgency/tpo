@@ -1,0 +1,8 @@
+name: TPO Popup
+type: module
+description: Popup manager for TPO.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo
+  - tpo_campaign

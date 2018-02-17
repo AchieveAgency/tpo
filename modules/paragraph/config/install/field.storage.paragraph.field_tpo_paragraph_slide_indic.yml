@@ -1,0 +1,27 @@
+uuid: 809c315a-71ad-43d9-a37b-59d58bc6f650
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 5uo-EiXFrvdHI1L_vfr0xYgWFCQUgZ_bZwub3uZ912E
+id: paragraph.field_tpo_paragraph_slide_indic
+field_name: field_tpo_paragraph_slide_indic
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

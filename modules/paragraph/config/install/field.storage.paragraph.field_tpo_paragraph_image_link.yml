@@ -1,0 +1,28 @@
+uuid: cc7ef97d-298d-48af-99d9-7c616c95555d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - link
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: A4IA4Ys03G9WoUiqKCMgx2ozQHkM_YaEIe95M3Ajk4A
+id: paragraph.field_tpo_paragraph_image_link
+field_name: field_tpo_paragraph_image_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

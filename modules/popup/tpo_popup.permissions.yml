@@ -1,0 +1,22 @@
+add popup entities:
+  title: 'Create new Popup entities'
+
+administer popup entities:
+  title: 'Administer Popup entities'
+  description: 'Allow to access the administration form to configure Popup entities.'
+  restrict access: true
+
+delete popup entities:
+  title: 'Delete Popup entities'
+
+edit popup entities:
+  title: 'Edit Popup entities'
+
+access popup overview:
+  title: 'Access the Popup overview page'
+
+view published popup entities:
+  title: 'View published Popup entities'
+
+view unpublished popup entities:
+  title: 'View unpublished Popup entities'

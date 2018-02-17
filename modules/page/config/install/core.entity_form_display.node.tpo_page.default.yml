@@ -1,0 +1,344 @@
+uuid: 38d091c9-458d-4211-8dcc-e52d88df0fa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tpo_page.field_tpo_page_class
+    - field.field.node.tpo_page.field_tpo_page_content
+    - field.field.node.tpo_page.field_tpo_page_header
+    - field.field.node.tpo_page.field_tpo_page_header_color
+    - field.field.node.tpo_page.field_tpo_page_header_image
+    - field.field.node.tpo_page.field_tpo_page_header_image_mode
+    - field.field.node.tpo_page.field_tpo_page_header_video
+    - field.field.node.tpo_page.field_tpo_page_id
+    - field.field.node.tpo_page.field_tpo_page_metatags
+    - field.field.node.tpo_page.field_tpo_page_parent
+    - field.field.node.tpo_page.field_tpo_page_sidebar_menu
+    - field.field.node.tpo_page.field_tpo_page_sidebar_menu_incl
+    - image.style.thumbnail
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - conditional_fields
+    - field_group
+    - file
+    - image
+    - jquery_colorpicker
+    - metatag
+    - paragraphs
+    - path
+    - scheduler
+third_party_settings:
+  field_group:
+    group_tpo_page_settings:
+      children:
+        - group_tpo_page_general
+        - group_tpo_page_display
+        - group_tpo_page_advanced
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: Settings
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Settings
+    group_tpo_page_general:
+      children:
+        - title
+        - field_tpo_page_parent
+      parent_name: group_tpo_page_settings
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: General
+    group_tpo_page_display:
+      children:
+        - group_tpo_pages_header
+        - group_tpo_page_sidebar
+      parent_name: group_tpo_page_settings
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Display
+    group_tpo_page_advanced:
+      children:
+        - field_tpo_page_id
+        - field_tpo_page_class
+      parent_name: group_tpo_page_settings
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Advanced
+    group_tpo_pages_header:
+      children:
+        - field_tpo_page_header
+        - field_tpo_page_header_image
+        - field_tpo_page_header_image_mode
+        - field_tpo_page_header_video
+        - field_tpo_page_header_color
+      parent_name: group_tpo_page_display
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Header
+    group_tpo_page_sidebar:
+      children:
+        - field_tpo_page_sidebar
+        - field_tpo_page_sidebar_menu
+        - field_tpo_page_sidebar_menu_incl
+      parent_name: group_tpo_page_display
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Sidebar
+id: node.tpo_page.default
+targetEntityType: node
+bundle: tpo_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tpo_page_class:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tpo_page_content:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_page_header:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tpo_page_header_color:
+    weight: 31
+    settings:
+      color: FFFFFF
+    third_party_settings:
+      conditional_fields:
+        aedb5099-12ae-4b63-bf5f-8e371eef5e7b:
+          dependee: field_tpo_page_header
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: color
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: tpo_page
+    type: jquery_colorpicker
+    region: content
+  field_tpo_page_header_image:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        c3840950-142a-470a-89ff-633a863e422f:
+          dependee: field_tpo_page_header
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: image
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: tpo_page
+    type: image_image
+    region: content
+  field_tpo_page_header_image_mode:
+    weight: 29
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        2438b203-309f-4af1-8df3-7d11476b5723:
+          dependee: field_tpo_page_header
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: image
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: tpo_page
+    type: options_select
+    region: content
+  field_tpo_page_header_video:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        6a9a54a1-3856-4583-adb7-661c356f3e71:
+          dependee: field_tpo_page_header
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: video
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: tpo_page
+    type: file_generic
+    region: content
+  field_tpo_page_id:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tpo_page_metatags:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_tpo_page_parent:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 80
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tpo_page_sidebar_menu:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tpo_page_sidebar_menu_incl:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tpo_pages_header:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 80
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -1,0 +1,178 @@
+uuid: 7c1954e5-510d-43db-bada-14c32aca54e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tpo_popup.field_tpo_popup_campaign
+    - field.field.node.tpo_popup.field_tpo_popup_delay
+    - field.field.node.tpo_popup.field_tpo_popup_description
+    - field.field.node.tpo_popup.field_tpo_popup_display_mode
+    - field.field.node.tpo_popup.field_tpo_popup_impression
+    - field.field.node.tpo_popup.field_tpo_popup_link
+    - field.field.node.tpo_popup.field_tpo_popup_scroll
+    - node.type.tpo_popup
+  module:
+    - field_group
+    - link
+    - paragraphs
+    - scheduler
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - group_general
+        - group_routes
+        - group_action
+        - group_schedule
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Settings
+    group_general:
+      children:
+        - field_tpo_popup_display_mode
+        - field_tpo_popup_impression
+        - field_tpo_popup_campaign
+      parent_name: group_settings
+      weight: 20
+      format_type: tab
+      format_settings:
+        label: Settings
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Settings
+    group_routes:
+      children:
+        - field_tpo_popup_link
+      parent_name: group_settings
+      weight: 21
+      format_type: tab
+      format_settings:
+        label: Pages
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Pages
+    group_schedule:
+      children:
+        - publish_on
+        - unpublish_on
+      parent_name: group_settings
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Schedule
+    group_action:
+      children:
+        - field_tpo_popup_delay
+        - field_tpo_popup_scroll
+      parent_name: group_settings
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Action
+_core:
+  default_config_hash: R5Ho3pc5pnuFsTRlaoa_5OMb4fPHuiE6S9RmFmBbXsI
+id: node.tpo_popup.default
+targetEntityType: node
+bundle: tpo_popup
+mode: default
+content:
+  field_tpo_popup_campaign:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tpo_popup_delay:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tpo_popup_description:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_popup_display_mode:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tpo_popup_impression:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tpo_popup_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_tpo_popup_scroll:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

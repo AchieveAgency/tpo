@@ -1,0 +1,32 @@
+uuid: e4da97c6-d921-439d-9f80-e49a08b2de3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_video
+    - paragraphs.paragraphs_type.tpo_paragraph_container
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - file
+_core:
+  default_config_hash: 8wauNTglIgTVlePpVpfrDLXuG8yGGeaZfgNS99uCYbA
+id: paragraph.tpo_paragraph_container.field_tpo_paragraph_back_video
+field_name: field_tpo_paragraph_back_video
+entity_type: paragraph
+bundle: tpo_paragraph_container
+label: 'Background Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 ogg webm'
+  max_filesize: '10 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

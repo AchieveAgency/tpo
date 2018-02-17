@@ -1,0 +1,50 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_column_1['#object'] %}
+{% set column_one = content.field_tpo_paragraph_column_1 %}
+{% else %}
+{% set column_one = false %}
+{% endif %}
+
+
+{#############################Sets Default Variables########################################}
+
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set row_classes = [
+    "row",
+    "tpo-paragraph-one-column",
+    "tpo-paragraph-row",
+    tpo_paragraph.class ? tpo_paragraph.class,
+  ]
+%}
+
+{%
+    set column_1_classes = [
+      "col-md-12",
+      "tpo-paragraph-column-one",
+      "tpo-paragraph-column",
+    ]
+  %}
+  
+
+{%
+  set row_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+<div {{ global.add_classes( row_classes ) }} {{ global.add_id( row_id ) }} style="{{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+    <div {{ global.add_classes( column_1_classes  ) }} style="{{ global.add_padding( tpo_paragraph.column_one_padding ) }}" >
+        {{column_one}}
+    </div>
+</div>
+
+{############################# Ends paragraph markup ########################################}
+    

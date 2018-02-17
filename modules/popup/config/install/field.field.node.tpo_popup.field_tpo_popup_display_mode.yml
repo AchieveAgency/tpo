@@ -1,0 +1,30 @@
+uuid: 50562f5e-2e83-49c9-bce2-2763e219d2a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_display_mode
+    - node.type.tpo_popup
+    - taxonomy.vocabulary.tpo_popup_display_mode
+_core:
+  default_config_hash: 1THkGV6uoaRRoQ7GTN4_8yyDPFzXBji2s1iYXwWIh18
+id: node.tpo_popup.field_tpo_popup_display_mode
+field_name: field_tpo_popup_display_mode
+entity_type: node
+bundle: tpo_popup
+label: 'Display Mode'
+description: "'Modal' popups are traditional, blocking popups which takes over the entire screen.\r\n'Drawer' popups slide up from the bottom of the page, and do not impede user navigation."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tpo_popup_display_mode: tpo_popup_display_mode
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

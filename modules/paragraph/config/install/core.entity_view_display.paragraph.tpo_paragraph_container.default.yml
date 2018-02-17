@@ -1,0 +1,200 @@
+uuid: 05b4335b-daa6-40c8-b570-0f1bd63fdb3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_2_image
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_back_color
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_back_img_st
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_back_style
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_back_video
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_class
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_cont_wid
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_content
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_id
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_margin_
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_margin_left
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_margin_righ
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_margin_top
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_padding_bot
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_padding_lef
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_padding_rig
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_padding_top
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_par_image
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_raw_code
+    - field.field.paragraph.tpo_paragraph_container.field_tpo_paragraph_title
+    - paragraphs.paragraphs_type.tpo_paragraph_container
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - jquery_colorpicker
+    - options
+_core:
+  default_config_hash: v6bLg0vprcwommg_ig-Z_W9BgyH73E7EKIFHAaS3Vn0
+id: paragraph.tpo_paragraph_container.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_container
+mode: default
+content:
+  field_tpo_paragraph_2_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_back_color:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: jquery_colorpicker_color_display
+    region: content
+  field_tpo_paragraph_back_img_st:
+    weight: 20
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_back_style:
+    weight: 22
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_back_video:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_tpo_paragraph_class:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_cont_wid:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tpo_paragraph_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_id:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_:
+    weight: 18
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_left:
+    weight: 19
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_righ:
+    weight: 17
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_margin_top:
+    weight: 16
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_bot:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_lef:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_rig:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_padding_top:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tpo_paragraph_par_image:
+    weight: 21
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tpo_paragraph_raw_code:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tpo_paragraph_title:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

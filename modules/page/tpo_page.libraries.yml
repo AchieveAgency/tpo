@@ -1,0 +1,9 @@
+tpo_page_library:
+  version: 1.x
+  css:
+    theme:
+      assets/css/tpo_page.css: {}
+  js:
+    assets/js/tpo_page.js: {}
+  dependencies:
+    - core/jquery

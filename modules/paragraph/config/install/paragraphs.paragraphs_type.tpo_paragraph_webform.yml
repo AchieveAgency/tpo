@@ -1,0 +1,11 @@
+uuid: 1f978ebb-1f69-48b0-92a5-2bfda16e1203
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yL0prhgWKFjqFXGsN_Kg2mQLmCjZuJmMVxv6hg5XAtA
+id: tpo_paragraph_webform
+label: Webform
+icon_uuid: null
+description: null
+behavior_plugins: {  }

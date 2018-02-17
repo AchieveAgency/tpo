@@ -1,0 +1,27 @@
+system.tpo_core.modules.tpo_popup:
+  title: 'Popup'
+  #route_name: entity.tpo_popup.collection
+  url: internal:/admin/content/popups
+  description: 'Manage popups on TPO Popup module.'
+  parent: system.tpo_core.modules
+  weight: 0
+
+system.tpo_core.modules.tpo_popup.collection:
+  title: 'Manage Popups'
+  url: internal:/admin/content/popups
+  description: 'Manage popups on TPO Popup module.'
+  parent: system.tpo_core.modules.tpo_popup
+  weight: 0
+
+system.tpo_core.modules.tpo_popup.add:
+  title: 'Add Popup'
+  url: internal:/node/add/tpo_popup
+  description: 'Add popup on TPO Popup module.'
+  parent: system.tpo_core.modules.tpo_popup
+  weight: 1
+
+system.admin_content.tpo_popup:
+  title: 'Popups'
+  url: internal:/admin/content/popups
+  description: 'Manage popups on TPO Popup module.'
+  parent: system.admin_content.tpo_popup

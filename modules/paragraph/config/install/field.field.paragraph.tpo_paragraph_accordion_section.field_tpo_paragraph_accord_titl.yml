@@ -1,0 +1,41 @@
+uuid: 0e93ba81-8348-4cf4-b03f-b646e36b9184
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_accord_titl
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: uOZzk9YKc-LNtLiCYn_umrkt2-35HN4TsZrDLuzYpgc
+id: paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord_titl
+field_name: field_tpo_paragraph_accord_titl
+entity_type: paragraph
+bundle: tpo_paragraph_accordion_section
+label: 'Accordion Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

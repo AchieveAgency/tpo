@@ -1,0 +1,51 @@
+body.modal-open .tpo_popup_display_drawer.modal {
+  background-color: transparent;
+  pointer-events: none;
+  width: 100%;
+}
+.tpo_popup_display_drawer .modal-dialog {
+  pointer-events: visible;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border: none;
+  margin: 0;
+}
+.tpo_popup_display_modal.in {
+  display: flex !important;
+}
+.tpo_popup_display_modal.in .modal-dialog {
+  margin: auto;
+}
+.tpo_popup_display_drawer .modal-dialog .modal-content {
+  border-radius: 0px;
+  border: none;
+}
+.tpo_body_popup_drawer_override.modal-open {
+  padding-right: 0 !important;
+  overflow: unset;
+}
+.tpo_popup_display_drawer .modal-header,
+.tpo_popup_display_modal .modal-header {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.tpo_popup_display_drawer .modal-body,
+.tpo_popup_display_modal .modal-body {
+  padding: 30px 41px 45px 41px;
+}
+.tpo_popup_display_drawer .modal-body .webform-submission-form,
+.tpo_popup_display_modal .modal-body .webform-submission-form {
+  display: flex;
+}
+.tpo_popup_display_drawer .modal-body .field--name-field-webform .form-actions,
+.tpo_popup_display_modal .modal-body .field--name-field-webform .form-actions {
+  top: 0;
+}
+.tpo_popup_display_modal .modal-body {
+  padding: 30px 41px 45px 41px;
+}
+.tpo_popup_display_drawer .modal-body {
+  padding: 20px 41px;
+}

@@ -1,0 +1,30 @@
+touch_swipe_jquery:
+  version: 1.x
+  js:
+    assets/js/jquery.touchSwipe.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+tpo_paragraph_admin:
+  version: 1.x
+  css:
+    layout:
+      assets/css/tpo_paragraph_admin.css: {}
+  js:
+    assets/js/tpo_paragraph_admin.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+tpo_paragraph:
+  version: 1.x
+  css:
+    layout:
+      assets/css/tpo_paragraph.css: {}
+  js:
+    assets/js/tpo_paragraph.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - tpo_paragraph/touch_swipe_jquery

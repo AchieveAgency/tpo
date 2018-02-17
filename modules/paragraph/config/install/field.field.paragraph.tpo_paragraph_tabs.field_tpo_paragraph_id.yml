@@ -1,0 +1,41 @@
+uuid: 39387323-f10c-4eca-85a5-dd730759bf7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_id
+    - paragraphs.paragraphs_type.tpo_paragraph_tabs
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: parent_id
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: XFBqniEzx6aP9QdZeNzV8Lzm3R_YmQUNMP1nZlyDoIg
+id: paragraph.tpo_paragraph_tabs.field_tpo_paragraph_id
+field_name: field_tpo_paragraph_id
+entity_type: paragraph
+bundle: tpo_paragraph_tabs
+label: ID
+description: 'Specify a unique id for the tabs container. Must contain at least one character and can''t contain any space characters.<br><br>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

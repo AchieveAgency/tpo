@@ -1,0 +1,9 @@
+.toolbar-icon-system-tpo-core:before {
+  background-image: url("https://trustedpartner.blob.core.windows.net/branding/tpo-symbol.png");
+}
+.toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-tpo-core:before,
+.toolbar-icon-system-tpo-core:hover:before,
+.toolbar-icon-system-tpo-core:active:before,
+.toolbar-icon-system-tpo-core.is-active:before {
+  background-image: url("https://trustedpartner.blob.core.windows.net/branding/tpo-symbol-active.png");
+}

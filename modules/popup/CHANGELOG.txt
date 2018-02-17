@@ -1,0 +1,20 @@
+TPO Popups 1.0.3, 2018-02-15
+------------------------
+- Add menu link to content
+
+TPO Popups 1.0.2, 2018-01-29
+------------------------
+-Removed dependancy for Display Suite module
+    + Added JS code to clear out author information
+-Updated install profiles to create taxonomy term and set link to unlimited
+
+TPO Popups 1.0.1, 2018-01-25
+------------------------
+- Improved modules sustanability with drupal cashing
+    + Removed admin role check in PHP module file
+- Fixed modules route checking
+    + Added node conditionals to be used in library loading
+
+TPO Popups 1.0.0, 2018-01-15
+------------------------
+- Initial release

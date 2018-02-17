@@ -1,0 +1,54 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################Image Link Variable########################################}
+{% if content.field_tpo_paragraph_image_link['#object'] %}
+{% set link_url = content.field_tpo_paragraph_image_link.0['#url'] %}
+{% set link_text = content.field_tpo_paragraph_image_link.0['#title'] %}
+{% else %}
+{% set link_url = false %}
+{% endif %}
+
+{#############################Image Target Variable########################################}
+{% if content.field_tpo_paragraph_image_targ['#object'] %}
+{% set target_link = content.field_tpo_paragraph_image_targ.0['#markup']|render|striptags|trim %}
+{% else %}
+{% set target_link = "_self" %}
+{% endif %}
+
+
+{#############################Sets Default Variables########################################}
+
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set image_classes = [
+    "tpo-paragraph-image",
+    tpo_paragraph.class ? tpo_paragraph.class,
+    "tpo-paragraph-content",
+  ]
+%}
+
+{%
+  set image_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+<div {{ global.add_classes( image_classes ) }} {{ global.add_id( image_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image_two,tpo_paragraph.background_image_style) }}">
+    {% if link_url %}
+    <a href="{{link_url}}" target = "{{target_link}}" alt="{{link_text}}">
+    {% endif %}
+    {% if tpo_paragraph.background_image is not null and tpo_paragraph.background_image is not empty %}
+    <img src="{{tpo_paragraph.background_image}}"></img>
+    {% endif %}
+    {% if image_link %}
+    </a>
+    {% endif %}    
+</div>
+
+{############################# Ends paragraph markup ########################################}
+    

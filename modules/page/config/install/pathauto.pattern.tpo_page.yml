@@ -1,0 +1,26 @@
+uuid: f4864f4d-331d-410f-bf29-e0f016ffe644
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - node
+id: tpo_page
+label: 'TPO Page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  02f27232-026a-4977-ade3-9a5a99075ad2:
+    id: node_type
+    bundles:
+      tpo_page: tpo_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 02f27232-026a-4977-ade3-9a5a99075ad2
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,27 @@
+uuid: 8ed3829c-f774-4b6d-911d-b8dad4d614a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_delay
+    - node.type.tpo_popup
+_core:
+  default_config_hash: 4TA5uA6_31IDji7LzEsxwPvnEY3ARgg5F4wI8LN3Ano
+id: node.tpo_popup.field_tpo_popup_delay
+field_name: field_tpo_popup_delay
+entity_type: node
+bundle: tpo_popup
+label: 'Delay (seconds)'
+description: 'After page load, the Popup will wait for the configured amount seconds before displaying.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

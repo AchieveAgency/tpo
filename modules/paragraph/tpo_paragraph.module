@@ -1,0 +1,151 @@
+<?php
+define ('TPO_PARAGRAPH_TEMPLATES', [
+  "paragraph__tpo_paragraph_1_column",
+  "paragraph__tpo_paragraph_2_column",
+  "paragraph__tpo_paragraph_3_column",
+  "paragraph__tpo_paragraph_4_column",
+  "paragraph__tpo_paragraph_5_column",
+  "paragraph__tpo_paragraph_6_column",
+  "paragraph__tpo_paragraph_accordion",
+  "paragraph__tpo_paragraph_accordion_section",
+  "paragraph__tpo_paragraph_block_quote",
+  "paragraph__tpo_paragraph_block_reference",
+  "paragraph__tpo_paragraph_body",
+  "paragraph__tpo_paragraph_carousel",
+  "paragraph__tpo_paragraph_container",
+  "paragraph__tpo_paragraph_raw_code",
+  "paragraph__tpo_paragraph_image",
+  "paragraph__tpo_paragraph_tabs",
+  "paragraph__tpo_paragraph_tabs_section",
+  "paragraph__tpo_paragraph_view",
+  "paragraph__tpo_paragraph_webform",
+  "paragraph__tpo_paragraph_call_to_action",
+]);
+
+function tpo_paragraph_theme() {
+  $templates = [];
+  foreach(TPO_PARAGRAPH_TEMPLATES as $template) {
+    $templates[$template.'_front'] = [ 'base hook' => 'paragraph' ];
+  }
+  return $templates;
+}
+
+function tpo_paragraph_get_field_values($variables,$field_name){
+  if(isset($variables['elements'][$field_name]['0']['#context']['value'])){
+    return $variables['elements'][$field_name]['0']['#context']['value'];
+  }
+  elseif(isset($variables['elements'][$field_name]['0']['#color'])){
+    return $variables['elements'][$field_name]['0']['#color'];
+  }
+  elseif(isset($variables['elements'][$field_name]['0']['#markup'])){
+    return $variables['elements'][$field_name]['0']['#markup'];
+  }
+  elseif(isset($variables['elements'][$field_name][0]['#file'])){
+    return file_create_url($variables['elements'][$field_name][0]['#file']->getFileUri());
+  }
+  elseif(isset($variables['elements'][$field_name][0]['#item'])){
+    return file_create_url(\Drupal\file\Entity\File::load($variables['elements'][$field_name][0]['#item']->getValue()['target_id'])->getFileUri());
+  }
+  else {
+    return false;
+  }
+}
+
+function tpo_paragraph_get_paragraphs_data($variables) {
+     /* if(isset($variables['elements']['field_tpo_paragraph_2_image'][0])){
+      \Drupal::logger('my_module')->notice('<pre>'.print_r(kint(file_create_url(\Drupal\file\Entity\File::load($variables['elements']['field_tpo_paragraph_2_image'][0]['#item']->getValue()['target_id'])->getFileUri())),true).'<pre>');
+    }  */
+  return [
+    'class'=>tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_class'),
+    'id'=>tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_id'),
+    'container_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_top'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_rig'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_bot'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_lef'),
+    ],
+    'container_margin' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_margin_top'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_margin_righ'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_margin_'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_margin_left'),
+    ],
+    'column_one_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t1'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r1'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b1'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l1'),
+    ],
+    'column_two_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t2'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r2'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b2'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l2'),
+    ],
+    'column_three_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t3'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r3'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b3'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l3'),
+    ],
+    'column_four_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t4'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r4'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b4'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l4'),
+    ],
+    'column_five_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t5'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r5'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b5'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l5'),
+    ],
+    'column_six_padding' => [
+      'top' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_t6'),
+      'right' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_r6'),
+      'bottom' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_b6'),
+      'left'=> tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_padding_l6'),
+    ],
+    'html_code' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_raw_code'),
+    'background_color' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_back_color'),
+    'background_image_style' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_back_img_st'),
+    'background_image' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_image'),
+    'background_image_two' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_2_image'),
+    'background_video' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_back_video'),
+    'background_parallax_image' => tpo_paragraph_get_field_values($variables,'field_tpo_paragraph_par_image'),
+    'background_style' => tpo_paragraph_get_field_values($variables, 'field_tpo_paragraph_back_p_style'),
+  ];
+}
+
+/**
+ * Implementation of hook_theme_suggestions_alter().
+ */
+function tpo_paragraph_theme_suggestions_alter(array &$suggestions, array &$variables, $hook) {
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if (
+    !(preg_match('/node\/(\d+)\/edit/', \Drupal::service('path.current')->getPath(), $matches))
+    && $hook == 'paragraph'
+    ) { // not admin paragraphs
+      $variables['tpo_paragraph'] = tpo_paragraph_get_paragraphs_data($variables);
+
+      foreach(TPO_PARAGRAPH_TEMPLATES as $template) {
+        if (in_array($template, $suggestions)) {
+          array_unshift($suggestions, $template.'_front');
+      }
+    }
+  }
+}
+
+/**
+ * Implementation of page attachments().
+ */
+function tpo_paragraph_page_attachments(array &$attachments) {
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if ( \Drupal::service('router.admin_context')->isAdminRoute($route) ) { // admin paragraphs
+    $attachments['#attached']['library'][] = 'tpo_paragraph/tpo_paragraph_admin';
+  }
+  else {
+    $attachments['#attached']['library'][] = 'tpo_paragraph/tpo_paragraph';
+    $attachments['#attached']['library'][] = 'tpo_paragraph/touch_swipe_jquery';
+  }
+}

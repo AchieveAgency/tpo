@@ -1,0 +1,72 @@
+uuid: 76a9f058-fb80-44e7-9de5-f28fa02afcba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_raw_code.field_tpo_paragraph_raw_code
+    - paragraphs.paragraphs_type.tpo_paragraph_raw_code
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_tpo_paragraph_settings:
+      children:
+        - group_tpo_paragraph_settings_ge
+        - group_tpo_paragraph_settings_ad
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Content
+    group_tpo_paragraph_settings_ge:
+      children:
+        - field_tpo_paragraph_raw_code
+      parent_name: group_tpo_paragraph_settings
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: General
+    group_tpo_paragraph_settings_ad:
+      children:
+        - field_tpo_paragraph_id
+        - field_tpo_paragraph_class
+      parent_name: group_tpo_paragraph_settings
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Advanced
+_core:
+  default_config_hash: gVpWCXJfbjE2XVogYMIv2t1tjY6iPE0oJwfrEnkEBYY
+id: paragraph.tpo_paragraph_raw_code.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_raw_code
+mode: default
+content:
+  field_tpo_paragraph_raw_code:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

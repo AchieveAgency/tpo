@@ -1,0 +1,166 @@
+uuid: 05da2bdc-39d9-422e-97dd-c97e0a3c768b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_accord__con
+    - paragraphs.paragraphs_type.tpo_paragraph_1_column
+    - paragraphs.paragraphs_type.tpo_paragraph_2_column
+    - paragraphs.paragraphs_type.tpo_paragraph_3_column
+    - paragraphs.paragraphs_type.tpo_paragraph_4_column
+    - paragraphs.paragraphs_type.tpo_paragraph_5_column
+    - paragraphs.paragraphs_type.tpo_paragraph_6_column
+    - paragraphs.paragraphs_type.tpo_paragraph_accordion_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Y0_syilCpqs7SvrcJhbYb_Ih71vwgbv_-NF5UG4fdqQ
+id: paragraph.tpo_paragraph_accordion_section.field_tpo_paragraph_accord__con
+field_name: field_tpo_paragraph_accord__con
+entity_type: paragraph
+bundle: tpo_paragraph_accordion_section
+label: 'Accordion Section Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tpo_paragraph_1_column: tpo_paragraph_1_column
+      tpo_paragraph_2_column: tpo_paragraph_2_column
+      tpo_paragraph_3_column: tpo_paragraph_3_column
+      tpo_paragraph_4_column: tpo_paragraph_4_column
+      tpo_paragraph_5_column: tpo_paragraph_5_column
+      tpo_paragraph_6_column: tpo_paragraph_6_column
+    target_bundles_drag_drop:
+      1_column:
+        weight: 59
+        enabled: false
+      2_column:
+        weight: 60
+        enabled: false
+      3_column:
+        weight: 61
+        enabled: false
+      4_column:
+        weight: 62
+        enabled: false
+      body_adv:
+        weight: 64
+        enabled: false
+      tpo_paragraph_block_quote:
+        weight: 68
+        enabled: false
+      tpo_paragraph_carousel:
+        weight: 72
+        enabled: false
+      call_to_action:
+        weight: 80
+        enabled: false
+      four_column_advanced:
+        weight: 81
+        enabled: false
+      html_code:
+        weight: 82
+        enabled: false
+      image:
+        weight: 83
+        enabled: false
+      image_left:
+        weight: -83
+        enabled: false
+      image_right:
+        weight: -83
+        enabled: false
+      media:
+        weight: -83
+        enabled: false
+      one_column_advanced:
+        weight: -83
+        enabled: false
+      row_container:
+        weight: -83
+        enabled: false
+      row_full_width:
+        weight: -83
+        enabled: false
+      simple_body:
+        weight: -83
+        enabled: false
+      social_media_links:
+        weight: -83
+        enabled: false
+      three_column_advanced:
+        weight: -83
+        enabled: false
+      tpo_paragraph_1_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_2_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_3_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_4_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_5_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_6_column:
+        enabled: true
+        weight: -83
+      tpo_paragraph_accordion:
+        weight: -83
+        enabled: false
+      tpo_paragraph_accordion_section:
+        weight: -83
+        enabled: false
+      tpo_paragraph_block_reference:
+        weight: -83
+        enabled: false
+      tpo_paragraph_body:
+        weight: -83
+        enabled: false
+      tpo_paragraph_call_to_action:
+        weight: -83
+        enabled: false
+      tpo_paragraph_container:
+        weight: -83
+        enabled: false
+      tpo_paragraph_raw_code:
+        weight: -83
+        enabled: false
+      tpo_paragraph_image:
+        weight: -83
+        enabled: false
+      tpo_paragraph_tabs:
+        weight: -83
+        enabled: false
+      tpo_paragraph_tabs_section:
+        weight: -83
+        enabled: false
+      tpo_paragraph_view:
+        weight: -83
+        enabled: false
+      tpo_paragraph_webform:
+        weight: -83
+        enabled: false
+      two_column_advanced:
+        weight: -83
+        enabled: false
+      view:
+        weight: -83
+        enabled: false
+      webform:
+        weight: -83
+        enabled: false
+field_type: entity_reference_revisions

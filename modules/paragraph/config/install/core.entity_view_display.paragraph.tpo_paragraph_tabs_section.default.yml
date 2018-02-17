@@ -1,0 +1,38 @@
+uuid: 6161627e-c4f6-4b7d-bf0d-9242ac650493
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tpo_paragraph_tabs_section.field_tpo_paragraph_tab_body
+    - field.field.paragraph.tpo_paragraph_tabs_section.field_tpo_paragraph_tab_name
+    - paragraphs.paragraphs_type.tpo_paragraph_tabs_section
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 0kyngzBcLdngcEMnRgUmbN7CUcdmiG8xm8fgGjy-VPg
+id: paragraph.tpo_paragraph_tabs_section.default
+targetEntityType: paragraph
+bundle: tpo_paragraph_tabs_section
+mode: default
+content:
+  field_tpo_paragraph_tab_body:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_paragraph_tab_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

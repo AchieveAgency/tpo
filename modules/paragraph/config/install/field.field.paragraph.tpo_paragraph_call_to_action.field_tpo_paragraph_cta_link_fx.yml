@@ -1,0 +1,26 @@
+uuid: 4dfb3a59-6510-42c8-b772-f344a0bb07b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_cta_link_fx
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: jhPIOf0Xu28d8in9-jDLPS0QrgCI4ac9Iowzjf-O6_0
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_cta_link_fx
+field_name: field_tpo_paragraph_cta_link_fx
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: 'Animate on Hover'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains tpo_social_share.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tpo_social_share_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tpo_social_share module.
+    case 'help.page.tpo_social_share':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Social sharing AddThis integration for TPO.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tpo_social_share_theme() {
+  return [
+    'tpo_social_share' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+function tpo_social_share_page_attachments(array &$attachments) {
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if (
+    !(\Drupal::service('router.admin_context')->isAdminRoute($route)) // not admin page
+  ) {
+    $config = \Drupal::service('config.factory')->getEditable('tpo_social_share.settings');
+    if ( $config->get('enable_on_front') || !(\Drupal::service('path.matcher')->isFrontPage()) ) {
+      $attachments['#attached']['library'][] = 'tpo_social_share/tpo_social_share';
+    }
+  }
+}
+
+function tpo_social_share_page_attachments_alter(&$build) {
+  $config = \Drupal::service('config.factory')->getEditable('tpo_social_share.settings');
+  $build['#attached']['drupalSettings']['tpo_social_share']['addthis_api_key'] = $config->get('addthis_api_key');
+}

@@ -1,0 +1,36 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set tab_classes = [
+    "tpo-paragraph-tabs",
+    tpo_paragraph.class ? tpo_paragraph.class,
+    "tpo-paragraph-content",
+  ]
+%}
+
+{%
+  set tab_id =  (tpo_paragraph.id is not null and tpo_paragraph.id is not empty  ? tpo_paragraph.id|clean_id:"tpo-paragraph-tab-" ~ paragraph.id())
+%}
+
+{############################# Begins paragraph markup ########################################}
+<div {{ global.add_classes( tab_classes ) }} {{ global.add_id( tab_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+  {% for key, item in content.field_tpo_paragraph_tab if key|first != '#' %}
+        <li role="presentation" class="{% if loop.first %}active{% endif %}"><a href="#tab-{{tab_id}}-{{ key }}" aria-controls="{{ item['#paragraph'].field_tpo_paragraph_tab_name.value }}" role="tab" data-toggle="tab">{{ item['#paragraph'].field_tpo_paragraph_tab_name.value }}</a></li>
+  {% endfor %}
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    {% for key, item in content.field_tpo_paragraph_tab if key|first != '#' %}
+        <div role="tabpanel" class="tab-pane {% if loop.first %}active in{% endif %} fade" id="tab-{{tab_id}}-{{ key }}">{{item}}</div>
+    {% endfor %}
+  </div>
+</div>
+{############################# Ends paragraph markup ########################################}

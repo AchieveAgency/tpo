@@ -1,0 +1,25 @@
+uuid: b77c0cfa-3e42-430f-9b9c-0a85b114b8e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_slide_indic
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+_core:
+  default_config_hash: XMMs_wRtT380Qus_1Z7HOGCv_8aEe_x5_NEkTft37fg
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_slide_indic
+field_name: field_tpo_paragraph_slide_indic
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: 'Slide Indicator'
+description: 'Show a current slide indicator at the bottom of the carousel.<br><br>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

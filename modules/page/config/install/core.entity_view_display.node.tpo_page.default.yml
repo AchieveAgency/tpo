@@ -1,0 +1,70 @@
+uuid: 2cdb0519-8d8f-432e-9f64-2ad240921efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tpo_page.field_tpo_page_class
+    - field.field.node.tpo_page.field_tpo_page_content
+    - field.field.node.tpo_page.field_tpo_page_header
+    - field.field.node.tpo_page.field_tpo_page_header_color
+    - field.field.node.tpo_page.field_tpo_page_header_image
+    - field.field.node.tpo_page.field_tpo_page_header_image_mode
+    - field.field.node.tpo_page.field_tpo_page_header_video
+    - field.field.node.tpo_page.field_tpo_page_id
+    - field.field.node.tpo_page.field_tpo_page_metatags
+    - field.field.node.tpo_page.field_tpo_page_parent
+    - field.field.node.tpo_page.field_tpo_page_sidebar_menu
+    - field.field.node.tpo_page.field_tpo_page_sidebar_menu_incl
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.tpo_page.default
+targetEntityType: node
+bundle: tpo_page
+mode: default
+content:
+  field_tpo_page_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tpo_page_metatags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_tpo_pages_header:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_tpo_page_class: true
+  field_tpo_page_header: true
+  field_tpo_page_header_color: true
+  field_tpo_page_header_image: true
+  field_tpo_page_header_image_mode: true
+  field_tpo_page_header_video: true
+  field_tpo_page_id: true
+  field_tpo_page_parent: true
+  field_tpo_page_sidebar_menu: true
+  field_tpo_page_sidebar_menu_incl: true

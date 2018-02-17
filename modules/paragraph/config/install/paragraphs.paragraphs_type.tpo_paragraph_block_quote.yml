@@ -1,0 +1,11 @@
+uuid: 9b5434fd-ea4e-46f8-b918-af4719ab9756
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fHNFPpAbvXgGePYqBOZC0N3jxYSfjfS7gvLSTQ3HUxQ
+id: tpo_paragraph_block_quote
+label: 'Block Quote'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

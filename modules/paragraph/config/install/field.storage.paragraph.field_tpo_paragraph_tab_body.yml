@@ -1,0 +1,29 @@
+uuid: 53e23a3d-0e38-4543-b138-63970186b9a7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - entity_reference_revisions
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: ygKorz_28_PNivTYM4EmSk4uB5TUDw-_P12cyIlP_9Q
+id: paragraph.field_tpo_paragraph_tab_body
+field_name: field_tpo_paragraph_tab_body
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

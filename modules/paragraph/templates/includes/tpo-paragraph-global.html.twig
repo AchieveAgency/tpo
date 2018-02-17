@@ -1,0 +1,64 @@
+{############################# Adding Classes ########################################}
+{% macro add_classes(classes) %}
+{% if classes is not null and classes is not empty %}
+class = "{{classes|join(' ')}}"
+{% endif %}
+{% endmacro %}
+
+{############################# Adding Ids  ########################################}
+{% macro add_id(id) %}
+{% if id is not null and id is not empty %}
+id = "{{id}}"
+{% endif %}
+{% endmacro %}
+
+{############################# Adding padding ########################################}
+{% macro add_padding(paddings) %}
+{% for side, padding in paddings %}
+{% if padding is not null and padding is not empty %}
+padding-{{ side }}: {{ padding }};
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+{############################# Adding Margin ########################################}
+{% macro add_margin(margins) %}
+{% for side, margin in margins %}
+{% if margin is not null and margin is not empty %}
+margin-{{ side }}: {{ margin }};
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+{############################# Adding Backgrounds (All Background) ########################################}
+{% macro add_container_background(type,color,image,image_style,parallax = false,parallax_image = null) %}
+{% if parallax and parallax_image is not null and parallax_image is not empty %}
+{% set background_image = "url('"~ parallax_image ~"')" %}
+{% set background_attachments = "fixed" %}
+{% set background_size = "cover" %}
+{% set background_placement = "center" %}
+{% elseif type == 'color' %}
+{% if color is not null and color is not empty %}
+{% set background_color = "#"~ color %}
+{% endif %}
+{% elseif type == 'image' %}
+{% if color is not null and color is not empty %}
+{% set background_color = "#"~ color  %}
+{% endif %}
+{% if image_style is not null and image_style is not empty %}
+{% if image_style == 'cover' or image_style == 'contain' %}
+{% set background_size = image_style %}
+{% set background_repeat = "no-repeat" %}
+{% elseif image_style == 'repeat' %}
+{% set background_repeat = "repeat" %}
+{% endif %}
+{% endif %}
+{% if image is not null and image is not empty and parallax == false %}
+{% set background_image = "url('"~ image ~"')" %}
+{% endif %}
+{% set background_placement = "center" %}
+{% endif %}
+{% if type != 'default' %}
+background: {{background_image}} {{background_repeat}} {{background_attachments}} {{background_placement}} {{background_color}}; background-size: {{background_size}};
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,27 @@
+uuid: fdcfd8fa-3f2d-45d0-ac2d-38dd6cffa3be
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: wtTSIbqU2rAnx9_BoBg0qFXCq37rZ_q9_7784KpjK-k
+id: paragraph.field_tpo_paragraph_key_control
+field_name: field_tpo_paragraph_key_control
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

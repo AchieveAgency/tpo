@@ -1,0 +1,13 @@
+system.tpo_core.modules.tpo_social_share:
+  title: 'Social Share'
+  route_name: tpo_social_share.tpo_social_share_settings_form
+  description: 'Social share settings for TPO Social Share module.'
+  parent: system.tpo_core.modules
+  weight: 0
+
+system.tpo_core.modules.tpo_social_share.settings:
+  title: 'Settings'
+  route_name: tpo_social_share.tpo_social_share_settings_form
+  description: 'Social share settings for TPO Social Share module.'
+  parent: system.tpo_core.modules.tpo_social_share
+  weight: 0

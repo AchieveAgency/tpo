@@ -1,0 +1,6 @@
+system.admin_content.tpo_page:
+  title: 'Pages'
+  url: internal:/admin/content/pages
+  description: 'Manage TPO Pages.'
+  parent: system.admin_content
+  weight: 0

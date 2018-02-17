@@ -1,0 +1,27 @@
+uuid: ceb0d983-c5ee-4813-90a7-c912e5ddeda2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_header
+    - node.type.tpo_page
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - options
+id: node.tpo_page.field_tpo_page_header
+field_name: field_tpo_page_header
+entity_type: node
+bundle: tpo_page
+label: 'Header Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: parent
+default_value_callback: ''
+settings: {  }
+field_type: list_string

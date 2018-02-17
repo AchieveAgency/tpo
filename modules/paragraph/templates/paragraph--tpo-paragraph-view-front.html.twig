@@ -1,0 +1,31 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################view field Variable########################################}
+{% if content.field_tpo_paragraph_view_cont['#object'] %}
+{% set view_content = content.field_tpo_paragraph_view_cont %}
+{% endif %}
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set view_classes = [
+    "tpo-paragraph-view",
+    tpo_paragraph.class ? tpo_paragraph.class,
+    "tpo-paragraph-content",
+  ]
+%}
+
+{%
+  set view_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+<div {{ global.add_classes( view_classes ) }} {{ global.add_id( view_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(tpo_paragraph.background_style,tpo_paragraph.background_color,tpo_paragraph.background_image,tpo_paragraph.background_image_style) }}">
+      {{view_content}}
+</div>
+
+{############################# Ends paragraph markup ########################################}

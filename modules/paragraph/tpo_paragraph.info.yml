@@ -1,0 +1,7 @@
+name: TPO Paragraphs
+type: module
+description: Paragraphs developed specifically for TPO based on bootstrap.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo

@@ -1,0 +1,8 @@
+Drupal 1.0.1, 2018-01-25
+------------------------
+- Fixed social share to work with cashed websites
+    + Removed call to check for user role in PHP
+
+Drupal 1.0.0, 2018-01-15
+------------------------
+- Initial release

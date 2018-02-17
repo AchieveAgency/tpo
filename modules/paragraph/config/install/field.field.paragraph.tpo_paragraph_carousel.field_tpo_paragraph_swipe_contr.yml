@@ -1,0 +1,25 @@
+uuid: 70aa6fb5-2529-4931-be41-e9e650d9cac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_swipe_contr
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+_core:
+  default_config_hash: 9_UtChSpsCuOT2Ueq0kt3g78_EH6_PpCWEhAYK-8D1s
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_swipe_contr
+field_name: field_tpo_paragraph_swipe_contr
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: 'Swipe Controls'
+description: 'Allow touch control for swiping on mobile devices.<br><br>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

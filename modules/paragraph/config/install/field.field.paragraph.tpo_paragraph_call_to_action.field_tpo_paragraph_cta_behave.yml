@@ -1,0 +1,26 @@
+uuid: 3fd51de7-8172-40fd-832f-992a9c681ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_cta_behave
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: iEAQaqMlV69JPv0FrEs_FZ9T4a9RxfgWyqWdE_D0l2A
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_cta_behave
+field_name: field_tpo_paragraph_cta_behave
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: 'Link Style'
+description: "- Full Block Link: the entire CTA will be clickable<br>\r\n- Button Link: adds a button to the CTA for the link<br>\r\n- Single Text Link: displays a text-only button<br>\r\n- Title and Text Link: entire CTA will be visible, but only the title and text will be clickable<br><br>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

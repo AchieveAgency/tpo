@@ -1,0 +1,91 @@
+
+{#############################Set Module Includes########################################}
+{% set includes_path = '/modules/custom/tpo/modules/paragraph/templates/includes' %}
+{% import includes_path ~ '/tpo-paragraph-global.html.twig' as global %}
+
+
+{#############################Content Variable########################################}
+{% if content.field_tpo_paragraph_content['#object'] %}
+    {% set nested_content = content.field_tpo_paragraph_content %}
+{% else %}
+    {% set nested_content = false %}
+{% endif %}
+
+{#############################Background Style Variable########################################}
+{% if content.field_tpo_paragraph_back_style['#object'] %}
+    {% set background_style = content.field_tpo_paragraph_back_style|render|striptags|trim %}
+{% else %}
+    {% set background_style = false %}
+{% endif %}
+
+{#############################Container Width Variable########################################}
+{% if content.field_tpo_paragraph_cont_wid['#object'] %}
+    {% set container_width = content.field_tpo_paragraph_cont_wid|render|striptags|trim %}
+{% else %}
+    {% set container_width = false %}
+{% endif %}
+
+{#############################Sets Default Variables########################################}
+{% set section_container_class_1 = false %}
+{% set section_container_class_2 = false %}
+{% set is_parallax = false %}
+
+{############################ Creates logical calculation to determine the container size ########################################}
+{% if container_width %}
+{% if container_width == "default" %}
+    {% set section_container_class_1 = "container" %}
+{% elseif container_width == "stretch" %}
+    {% set section_container_class_1 = "container-fluid" %}
+    {% set section_container_class_2 = "container" %}
+{% elseif container_width == "full-stretch" %}
+    {% set section_container_class_1 = "container-fluid" %}
+{% elseif container_width == "parallax" %}
+    {% set section_container_class_1 = "container-fluid" %}
+    {% set section_container_class_2 = "container" %}
+    {% set is_parallax = true %}
+{% elseif container_width == "parallax-stretch" %}
+    {% set section_container_class_1 = "container-fluid" %}
+    {% set is_parallax = true %}
+{% endif %}
+{% endif %}
+
+{############################# Sets classes used for containers ########################################}
+{%
+  set container_one_classes = [
+    "tpo-paragraph-container",
+	section_container_class_1 ? section_container_class_1|clean_class,
+    tpo_paragraph.class ? tpo_paragraph.class,
+  ]
+%}
+
+{%
+    set container_two_classes = [
+        "tpo-paragraph-secondary-container",
+        section_container_class_2 ? section_container_class_2|clean_class,
+    ]
+%}
+
+{%
+  set container_id = tpo_paragraph.id ? tpo_paragraph.id|clean_id
+%}
+
+{############################# Begins paragraph markup ########################################}
+
+<div {{ global.add_classes( container_one_classes ) }} {{ global.add_id( container_id ) }} style="{{ global.add_padding( tpo_paragraph.container_padding ) }} {{ global.add_margin( tpo_paragraph.container_margin ) }} {{ global.add_container_background(background_style,tpo_paragraph.background_color,tpo_paragraph.background_image_two,tpo_paragraph.background_image_style,is_parallax,tpo_paragraph.background_parallax_image) }}">
+    {% if background_style == 'video' and tpo_paragraph.background_video is not null and tpo_paragraph.background_video is not empty %}
+        <div class="tpo-paragraph-video-container">
+            <video autoplay loop muted class="tpo-paragraph-video-background">
+                    <source src="{{tpo_paragraph.background_video}}" type="video/mp4" alt="tpo-videos"/>
+            </video>
+        </div>
+    {% endif %}   
+    {% if section_container_class_2 %}
+    <div {{ global.add_classes( container_two_classes ) }} >
+    {% endif %}
+    {{nested_content}}
+    {% if section_container_class_2 %}
+    </div>
+    {% endif %}
+</div>
+
+{############################# Ends paragraph markup ########################################}

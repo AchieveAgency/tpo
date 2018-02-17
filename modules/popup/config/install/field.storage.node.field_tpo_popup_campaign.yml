@@ -1,0 +1,22 @@
+uuid: 51dc9b62-86ee-45e4-8f28-81be0e507185
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - tpo_campaign
+_core:
+  default_config_hash: Jr6_SSkIFVTRHIf9SzE7xs-YpNhws9DI9pSiGXxl7nM
+id: node.field_tpo_popup_campaign
+field_name: field_tpo_popup_campaign
+entity_type: node
+type: entity_reference
+settings:
+  target_type: tpo_campaign
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: 7384877b-213a-4f81-99aa-c8343b162d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_color
+    - paragraphs.paragraphs_type.tpo_paragraph_block_reference
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - jquery_colorpicker
+_core:
+  default_config_hash: zDeKwVwG7Vv1gIpaLlHXNbGy5J3xXgrE-b9VMff6Wj8
+id: paragraph.tpo_paragraph_block_reference.field_tpo_paragraph_back_color
+field_name: field_tpo_paragraph_back_color
+entity_type: paragraph
+bundle: tpo_paragraph_block_reference
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: FFFFFF
+default_value_callback: ''
+settings: {  }
+field_type: jquery_colorpicker

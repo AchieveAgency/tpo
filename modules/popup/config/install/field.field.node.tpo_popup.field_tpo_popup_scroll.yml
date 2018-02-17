@@ -1,0 +1,25 @@
+uuid: 5dcf7cd2-9aaa-40a8-8e70-3b45ce30ee35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_scroll
+    - node.type.tpo_popup
+_core:
+  default_config_hash: qTfOssiETm-Ug3uJYnjN-KpZAbh38l1i_ROSAQKOKso
+id: node.tpo_popup.field_tpo_popup_scroll
+field_name: field_tpo_popup_scroll
+entity_type: node
+bundle: tpo_popup
+label: 'Scroll (%)'
+description: "Popup will show based on what percentage the user has scrolled on the site<br>To display popups on all pages type /*. To add to a specific type of content such as events type /event/*.\r\n<br><br>\r\n<b>*If a value is in this field, this setting will override the delay</b>\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

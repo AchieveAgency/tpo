@@ -1,0 +1,39 @@
+uuid: cf0c49b9-8184-403c-9eea-bbd522ba2ddd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 7laLfkcrFgKmrFtE4PmQWHyQNFtgHZ_ZRpq5YtjoPzM
+id: paragraph.field_tpo_paragraph_quote_size
+field_name: field_tpo_paragraph_quote_size
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'well well-sm'
+      label: Small
+    -
+      value: well
+      label: Medium
+    -
+      value: 'well well-lg'
+      label: Large
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

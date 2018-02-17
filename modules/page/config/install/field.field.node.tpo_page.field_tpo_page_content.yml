@@ -1,0 +1,34 @@
+uuid: 3be93c1b-ca23-4dc5-aba3-fff9929add7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_page_content
+    - node.type.tpo_page
+    - paragraphs.paragraphs_type.tpo_paragraph_container
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - entity_reference_revisions
+id: node.tpo_page.field_tpo_page_content
+field_name: field_tpo_page_content
+entity_type: node
+bundle: tpo_page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tpo_paragraph_container: tpo_paragraph_container
+    target_bundles_drag_drop:
+      tpo_paragraph_container:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

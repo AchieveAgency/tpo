@@ -1,0 +1,28 @@
+uuid: 9cccb53e-355d-4ba9-a31d-95e6ae55b801
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_back_img_st
+    - paragraphs.paragraphs_type.tpo_paragraph_1_column
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: ElXFtzM-kAv4gFvUerZexY_oNTCjitC4nERAx8wPynM
+id: paragraph.tpo_paragraph_1_column.field_tpo_paragraph_back_img_st
+field_name: field_tpo_paragraph_back_img_st
+entity_type: paragraph
+bundle: tpo_paragraph_1_column
+label: 'Background Image Style'
+description: "- Cover: fills entire container with the image<br>\r\n- Contain: shrinks the image to fit without cropping<br>\r\n- Repeat: repeats the image both horizontally and vertically<br>\r\n- None: uses default image settings<br><br>"
+required: false
+translatable: true
+default_value:
+  -
+    value: cover
+default_value_callback: ''
+settings: {  }
+field_type: list_string

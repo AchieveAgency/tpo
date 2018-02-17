@@ -1,0 +1,26 @@
+uuid: c894332f-c45e-4a63-9c2e-1f98d1234c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_btn_icon
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: FEbL8c1zw_SyMxru1qdwmLctpy8USMCXGw9eiozZT1Q
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_btn_icon
+field_name: field_tpo_paragraph_btn_icon
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: 'Button Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

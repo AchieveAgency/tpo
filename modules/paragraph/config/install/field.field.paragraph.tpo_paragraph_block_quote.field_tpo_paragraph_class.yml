@@ -1,0 +1,37 @@
+uuid: 5b082dc2-9968-42fc-a1bc-1aabcd7645c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_class
+    - paragraphs.paragraphs_type.tpo_paragraph_block_quote
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: yU_NidAI1rl9DmOm9wGSzoqIv0ADZtBhrfeLEI7WGz8
+id: paragraph.tpo_paragraph_block_quote.field_tpo_paragraph_class
+field_name: field_tpo_paragraph_class
+entity_type: paragraph
+bundle: tpo_paragraph_block_quote
+label: Class
+description: 'Customize the styling of the paragraph by adding CSS classes. Separate multiple classes by spaces.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

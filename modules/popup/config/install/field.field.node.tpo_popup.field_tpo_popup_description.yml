@@ -1,0 +1,94 @@
+uuid: 36974fbe-e46d-4de2-a5af-82674844fd49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_description
+    - node.type.tpo_popup
+    - paragraphs.paragraphs_type.row_container
+    - paragraphs.paragraphs_type.row_full_width
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: ah1WmCQ3DJhFJhwl6AlkfezpyRTWyxSquH4vofjezjo
+id: node.tpo_popup.field_tpo_popup_description
+field_name: field_tpo_popup_description
+entity_type: node
+bundle: tpo_popup
+label: Content
+description: 'The body content that will display in the popup'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      row_container: row_container
+      row_full_width: row_full_width
+    target_bundles_drag_drop:
+      1_column:
+        weight: 22
+        enabled: false
+      2_column:
+        weight: 23
+        enabled: false
+      3_column:
+        weight: 24
+        enabled: false
+      4_column:
+        weight: 25
+        enabled: false
+      body_adv:
+        weight: 26
+        enabled: false
+      call_to_action:
+        weight: 27
+        enabled: false
+      four_column_advanced:
+        weight: 28
+        enabled: false
+      html_code:
+        weight: 29
+        enabled: false
+      image:
+        weight: 30
+        enabled: false
+      image_left:
+        weight: 31
+        enabled: false
+      image_right:
+        weight: 32
+        enabled: false
+      media:
+        weight: 33
+        enabled: false
+      one_column_advanced:
+        weight: 34
+        enabled: false
+      row_container:
+        enabled: true
+        weight: 35
+      row_full_width:
+        enabled: true
+        weight: 36
+      simple_body:
+        weight: 37
+        enabled: false
+      social_media_links:
+        weight: 38
+        enabled: false
+      three_column_advanced:
+        weight: 39
+        enabled: false
+      two_column_advanced:
+        weight: 40
+        enabled: false
+      view:
+        weight: 41
+        enabled: false
+      webform:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

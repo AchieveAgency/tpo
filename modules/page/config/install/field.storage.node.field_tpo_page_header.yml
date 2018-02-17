@@ -1,0 +1,40 @@
+uuid: 2683166b-e5f2-49be-9bc0-db60ab8676a4
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_page
+  module:
+    - tpo_page
+    - node
+    - options
+id: node.field_tpo_page_header
+field_name: field_tpo_page_header
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hide
+      label: 'No header'
+    -
+      value: parent
+      label: 'Use parent header'
+    -
+      value: color
+      label: 'Solid color'
+    -
+      value: image
+      label: 'Background image'
+    -
+      value: video
+      label: 'Background video'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

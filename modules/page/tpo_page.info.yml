@@ -1,0 +1,8 @@
+name: TPO Pages
+type: module
+description: Pages submodule for TPO.
+core: 8.x
+package: TPO
+dependencies:
+  - tpo
+  - jquery_colorpicker

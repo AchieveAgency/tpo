@@ -1,0 +1,22 @@
+uuid: d1157c6d-2a2b-4889-831d-34ca06e8e10d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: uqzz5sXHmL3ZcQHLe9lTHPVBXepdz7ZybLuwYlqgfwE
+id: node.field_tpo_popup_delay
+field_name: field_tpo_popup_delay
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

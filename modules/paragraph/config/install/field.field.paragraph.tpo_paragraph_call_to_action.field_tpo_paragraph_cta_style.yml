@@ -1,0 +1,28 @@
+uuid: 950c347c-69f6-4008-b7b5-74c7dcce742e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_cta_style
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - options
+_core:
+  default_config_hash: N2vungGFk-w3hsfF5ONc-kjxLi8-2o9GgOzshfj9S6Y
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_cta_style
+field_name: field_tpo_paragraph_cta_style
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: Template
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: primary-block
+default_value_callback: ''
+settings: {  }
+field_type: list_string

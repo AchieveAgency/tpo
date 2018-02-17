@@ -1,0 +1,28 @@
+uuid: bef291cc-dde8-4ca9-9b92-b5289f6013d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_image_link
+    - paragraphs.paragraphs_type.tpo_paragraph_call_to_action
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - link
+_core:
+  default_config_hash: zdPvKPOxRKk8Q38KiRMeRefbybrgbbHfbovYQt3-Du4
+id: paragraph.tpo_paragraph_call_to_action.field_tpo_paragraph_image_link
+field_name: field_tpo_paragraph_image_link
+entity_type: paragraph
+bundle: tpo_paragraph_call_to_action
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

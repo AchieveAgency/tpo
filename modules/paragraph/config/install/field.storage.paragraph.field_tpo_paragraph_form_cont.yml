@@ -1,0 +1,29 @@
+uuid: e55e184a-c0dd-47bf-98e4-7bcea2be120e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - field_permissions
+    - paragraphs
+    - webform
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: FhgJYx6REicXhrAFVBI2hyi1mSXB7q8GO0Ewc_tZscw
+id: paragraph.field_tpo_paragraph_form_cont
+field_name: field_tpo_paragraph_form_cont
+entity_type: paragraph
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

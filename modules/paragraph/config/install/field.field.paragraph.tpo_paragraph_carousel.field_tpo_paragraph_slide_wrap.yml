@@ -1,0 +1,25 @@
+uuid: 26a7c2cd-14ee-4e34-95c8-279455c19adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_slide_wrap
+    - paragraphs.paragraphs_type.tpo_paragraph_carousel
+_core:
+  default_config_hash: OJjwgvWS-9-ZtbfGemd7G_WWlopf3YU2zhwpGE3Kma8
+id: paragraph.tpo_paragraph_carousel.field_tpo_paragraph_slide_wrap
+field_name: field_tpo_paragraph_slide_wrap
+entity_type: paragraph
+bundle: tpo_paragraph_carousel
+label: 'Slide Wrapping'
+description: 'Loop back to the first slide once the final slide has been reached.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

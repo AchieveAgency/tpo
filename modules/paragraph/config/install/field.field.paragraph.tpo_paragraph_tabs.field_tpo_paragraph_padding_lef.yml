@@ -1,0 +1,37 @@
+uuid: d23f95c8-ba94-4110-a4f5-5c83d427d6b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpo_paragraph_padding_lef
+    - paragraphs.paragraphs_type.tpo_paragraph_tabs
+  enforced:
+    module:
+      - tpo_paragraph
+  module:
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    field: parent_id
+    plugins: {  }
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+_core:
+  default_config_hash: fsVfxy9KPwYJFBHCmoefm4pIHgkNlwboFeB0O0o2Zwg
+id: paragraph.tpo_paragraph_tabs.field_tpo_paragraph_padding_lef
+field_name: field_tpo_paragraph_padding_lef
+entity_type: paragraph
+bundle: tpo_paragraph_tabs
+label: Left
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

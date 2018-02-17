@@ -1,0 +1,22 @@
+uuid: 7761d1c9-2934-4282-8e11-cebee67d4bf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tpo_page
+id: node.tpo_page.promote
+field_name: promote
+entity_type: node
+bundle: tpo_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

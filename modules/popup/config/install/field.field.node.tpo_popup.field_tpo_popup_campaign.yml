@@ -1,0 +1,28 @@
+uuid: 5cc69317-4822-4ee7-8e60-a71eabd57eeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tpo_popup_campaign
+    - node.type.tpo_popup
+_core:
+  default_config_hash: DpKig9HQpWUPXX-sFoQwM2ylHAFjNTfSqgiTRMbeosU
+id: node.tpo_popup.field_tpo_popup_campaign
+field_name: field_tpo_popup_campaign
+entity_type: node
+bundle: tpo_popup
+label: Campaign
+description: 'Allows the popup to be included in a campaign '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:tpo_campaign'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

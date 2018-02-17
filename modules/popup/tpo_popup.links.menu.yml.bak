@@ -1,0 +1,20 @@
+system.tpo_core.modules.tpo_popup:
+  title: 'Popup'
+  route_name: entity.tpo_popup.collection
+  description: 'Social share settings for TPO Social Share module.'
+  parent: system.tpo_core.modules
+  weight: 0
+
+system.tpo_core.modules.tpo_popup.collection:
+  title: 'Manage Popups'
+  route_name: entity.tpo_popup.collection
+  description: 'Manage popups on TPO Popup module.'
+  parent: system.tpo_core.modules.tpo_popup
+  weight: 0
+
+system.tpo_core.modules.tpo_popup.add:
+  title: 'Add Popup'
+  route_name: entity.tpo_popup.add_form
+  description: 'Add popup on TPO Popup module.'
+  parent: system.tpo_core.modules.tpo_popup
+  weight: 1
