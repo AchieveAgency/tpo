@@ -23,5 +23,6 @@ system.tpo_core.modules.tpo_popup.add:
 system.admin_content.tpo_popup:
   title: 'Popups'
   url: internal:/admin/content/popups
-  description: 'Manage popups on TPO Popup module.'
-  parent: system.admin_content.tpo_popup
+  description: 'Manage TPO Popups.'
+  parent: system.admin_content
+  weight: 0
