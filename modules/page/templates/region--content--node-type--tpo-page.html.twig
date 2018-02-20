@@ -44,26 +44,13 @@
           </div>
         </div>
         <div id="tpo-page-content" class="tpo-pages-with-sidebar col-md-9 col-sm-12">
-          {# Action Links #}
-          {% if action_links %}
-            {% block action_links %}
-              <ul class="action-links">{{ action_links }}</ul>
-            {% endblock %}
-          {% endif %}
-
           {{ content }}
         </div>
       </div>
     </div>
   {% else %}
     <div class="region region-{{ region|clean_class }} {{ tpo_page.general.class }}" id="{{ tpo_page.general.id }}">
-      <div id="tpo-page-content">{# Action Links #}
-        {% if action_links %}
-          {% block action_links %}
-            <ul class="action-links">{{ action_links }}</ul>
-          {% endblock %}
-        {% endif %}
-
+      <div id="tpo-page-content">
         {{ content }}
       </div>
     </div>
